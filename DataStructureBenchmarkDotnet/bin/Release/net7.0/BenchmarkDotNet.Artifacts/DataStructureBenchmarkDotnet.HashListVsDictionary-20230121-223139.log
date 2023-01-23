@@ -1,0 +1,310 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\4dc2c748-339f-4526-b0aa-9ed9b49541ec
+// command took 2.46s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\4dc2c748-339f-4526-b0aa-9ed9b49541ec
+// command took 14.9s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\4dc2c748-339f-4526-b0aa-9ed9b49541ec
+// command took 4.72s and exited with 0
+// ***** Done, took 00:00:22 (22.38 sec)   *****
+// Found 3 benchmarks:
+//   HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+//   HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+//   HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4dc2c748-339f-4526-b0aa-9ed9b49541ec.dll --anonymousPipes 2204 2540 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.DictionaryAccess(n: 1000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\4dc2c748-339f-4526-b0aa-9ed9b49541ec\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-UJNOBP(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 335700.00 ns, 335.7000 us/op
+WorkloadJitting  1: 1 op, 1110200.00 ns, 1.1102 ms/op
+
+OverheadWarmup   1: 10 op, 1500.00 ns, 150.0000 ns/op
+OverheadWarmup   2: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   3: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   4: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   5: 10 op, 1100.00 ns, 110.0000 ns/op
+OverheadWarmup   6: 10 op, 500.00 ns, 50.0000 ns/op
+
+OverheadActual   1: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   2: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual   3: 10 op, 1500.00 ns, 150.0000 ns/op
+OverheadActual   4: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadActual   5: 10 op, 900.00 ns, 90.0000 ns/op
+OverheadActual   6: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadActual   7: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   8: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   9: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  10: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  11: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  12: 10 op, 5500.00 ns, 550.0000 ns/op
+OverheadActual  13: 10 op, 1800.00 ns, 180.0000 ns/op
+OverheadActual  14: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  15: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  16: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  17: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  18: 10 op, 1100.00 ns, 110.0000 ns/op
+OverheadActual  19: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  20: 10 op, 500.00 ns, 50.0000 ns/op
+
+WorkloadWarmup   1: 10 op, 7200.00 ns, 720.0000 ns/op
+WorkloadWarmup   2: 10 op, 2600.00 ns, 260.0000 ns/op
+WorkloadWarmup   3: 10 op, 2400.00 ns, 240.0000 ns/op
+WorkloadWarmup   4: 10 op, 3900.00 ns, 390.0000 ns/op
+WorkloadWarmup   5: 10 op, 4300.00 ns, 430.0000 ns/op
+WorkloadWarmup   6: 10 op, 3200.00 ns, 320.0000 ns/op
+WorkloadWarmup   7: 10 op, 2000.00 ns, 200.0000 ns/op
+WorkloadWarmup   8: 10 op, 1700.00 ns, 170.0000 ns/op
+WorkloadWarmup   9: 10 op, 2000.00 ns, 200.0000 ns/op
+WorkloadWarmup  10: 10 op, 1600.00 ns, 160.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 4100.00 ns, 410.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 3600.00 ns, 360.0000 ns/op
+
+// AfterAll
+// Benchmark Process 5900 has exited with code 0.
+
+Mean = 360.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 360.000 ns, Q1 = 360.000 ns, Median = 360.000 ns, Q3 = 360.000 ns, Max = 360.000 ns
+IQR = 0.000 ns, LowerFence = 360.000 ns, UpperFence = 360.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 2 (66.7%) benchmark(s) to run. Estimated finish 2023-01-21 22:32 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4dc2c748-339f-4526-b0aa-9ed9b49541ec.dll --anonymousPipes 2668 2388 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.DictionaryAccess(n: 10000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\4dc2c748-339f-4526-b0aa-9ed9b49541ec\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-YWTJYS(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 250200.00 ns, 250.2000 us/op
+WorkloadJitting  1: 1 op, 558300.00 ns, 558.3000 us/op
+
+OverheadWarmup   1: 10 op, 900.00 ns, 90.0000 ns/op
+OverheadWarmup   2: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   3: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   4: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   5: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   6: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   7: 10 op, 400.00 ns, 40.0000 ns/op
+
+OverheadActual   1: 10 op, 1800.00 ns, 180.0000 ns/op
+OverheadActual   2: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   3: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadActual   4: 10 op, 1900.00 ns, 190.0000 ns/op
+OverheadActual   5: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   6: 10 op, 300.00 ns, 30.0000 ns/op
+OverheadActual   7: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual   8: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual   9: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadActual  10: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  11: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  12: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  13: 10 op, 1200.00 ns, 120.0000 ns/op
+OverheadActual  14: 10 op, 300.00 ns, 30.0000 ns/op
+OverheadActual  15: 10 op, 300.00 ns, 30.0000 ns/op
+OverheadActual  16: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  17: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  18: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  19: 10 op, 300.00 ns, 30.0000 ns/op
+OverheadActual  20: 10 op, 400.00 ns, 40.0000 ns/op
+
+WorkloadWarmup   1: 10 op, 15700.00 ns, 1.5700 us/op
+WorkloadWarmup   2: 10 op, 4000.00 ns, 400.0000 ns/op
+WorkloadWarmup   3: 10 op, 2500.00 ns, 250.0000 ns/op
+WorkloadWarmup   4: 10 op, 3500.00 ns, 350.0000 ns/op
+WorkloadWarmup   5: 10 op, 7300.00 ns, 730.0000 ns/op
+WorkloadWarmup   6: 10 op, 3300.00 ns, 330.0000 ns/op
+WorkloadWarmup   7: 10 op, 1900.00 ns, 190.0000 ns/op
+WorkloadWarmup   8: 10 op, 1800.00 ns, 180.0000 ns/op
+WorkloadWarmup   9: 10 op, 1800.00 ns, 180.0000 ns/op
+WorkloadWarmup  10: 10 op, 1600.00 ns, 160.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 3900.00 ns, 390.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 3450.00 ns, 345.0000 ns/op
+
+// AfterAll
+// Benchmark Process 25244 has exited with code 0.
+
+Mean = 345.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 345.000 ns, Q1 = 345.000 ns, Median = 345.000 ns, Q3 = 345.000 ns, Max = 345.000 ns
+IQR = 0.000 ns, LowerFence = 345.000 ns, UpperFence = 345.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 1 (33.3%) benchmark(s) to run. Estimated finish 2023-01-21 22:32 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4dc2c748-339f-4526-b0aa-9ed9b49541ec.dll --anonymousPipes 2528 1888 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.DictionaryAccess(n: 100000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 2 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\4dc2c748-339f-4526-b0aa-9ed9b49541ec\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-QLPNZU(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 264900.00 ns, 264.9000 us/op
+WorkloadJitting  1: 1 op, 1249700.00 ns, 1.2497 ms/op
+
+OverheadWarmup   1: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadWarmup   2: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   3: 10 op, 300.00 ns, 30.0000 ns/op
+OverheadWarmup   4: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   5: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   6: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadWarmup   7: 10 op, 800.00 ns, 80.0000 ns/op
+
+OverheadActual   1: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual   2: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadActual   3: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   4: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadActual   5: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual   6: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   7: 10 op, 1500.00 ns, 150.0000 ns/op
+OverheadActual   8: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual   9: 10 op, 2900.00 ns, 290.0000 ns/op
+OverheadActual  10: 10 op, 1100.00 ns, 110.0000 ns/op
+OverheadActual  11: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  12: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  13: 10 op, 1900.00 ns, 190.0000 ns/op
+OverheadActual  14: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  15: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  16: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  17: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  18: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  19: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  20: 10 op, 500.00 ns, 50.0000 ns/op
+
+WorkloadWarmup   1: 10 op, 26900.00 ns, 2.6900 us/op
+WorkloadWarmup   2: 10 op, 9800.00 ns, 980.0000 ns/op
+WorkloadWarmup   3: 10 op, 8500.00 ns, 850.0000 ns/op
+WorkloadWarmup   4: 10 op, 10700.00 ns, 1.0700 us/op
+WorkloadWarmup   5: 10 op, 4000.00 ns, 400.0000 ns/op
+WorkloadWarmup   6: 10 op, 16700.00 ns, 1.6700 us/op
+WorkloadWarmup   7: 10 op, 4400.00 ns, 440.0000 ns/op
+WorkloadWarmup   8: 10 op, 4500.00 ns, 450.0000 ns/op
+WorkloadWarmup   9: 10 op, 21400.00 ns, 2.1400 us/op
+WorkloadWarmup  10: 10 op, 4700.00 ns, 470.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 11500.00 ns, 1.1500 us/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 11000.00 ns, 1.1000 us/op
+
+// AfterAll
+// Benchmark Process 23772 has exited with code 0.
+
+Mean = 1.100 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.100 μs, Q1 = 1.100 μs, Median = 1.100 μs, Q3 = 1.100 μs, Max = 1.100 μs
+IQR = 0.000 μs, LowerFence = 1.100 μs, UpperFence = 1.100 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2023-01-21 22:32 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\DataStructureBenchmarkDotnet.HashListVsDictionary-report.csv
+  BenchmarkDotNet.Artifacts\results\DataStructureBenchmarkDotnet.HashListVsDictionary-report-github.md
+  BenchmarkDotNet.Artifacts\results\DataStructureBenchmarkDotnet.HashListVsDictionary-report.html
+
+// * Detailed results *
+HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 360.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 360.000 ns, Q1 = 360.000 ns, Median = 360.000 ns, Q3 = 360.000 ns, Max = 360.000 ns
+IQR = 0.000 ns, LowerFence = 360.000 ns, UpperFence = 360.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[359.500 ns ; 360.500 ns) | @
+---------------------------------------------------
+
+HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 345.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 345.000 ns, Q1 = 345.000 ns, Median = 345.000 ns, Q3 = 345.000 ns, Max = 345.000 ns
+IQR = 0.000 ns, LowerFence = 345.000 ns, UpperFence = 345.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[344.500 ns ; 345.500 ns) | @
+---------------------------------------------------
+
+HashListVsDictionary.DictionaryAccess: Job-NMURPB(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.100 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.100 μs, Q1 = 1.100 μs, Median = 1.100 μs, Q3 = 1.100 μs, Max = 1.100 μs
+IQR = 0.000 μs, LowerFence = 1.100 μs, UpperFence = 1.100 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.099 μs ; 1.101 μs) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.4, OS=Windows 10 (10.0.19044.2364/21H2/November2021Update)
+Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+  Job-NMURPB : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+
+InvocationCount=10  IterationCount=1  LaunchCount=1  
+UnrollFactor=1  WarmupCount=10  
+
+|           Method |      n |       Mean | Error |
+|----------------- |------- |-----------:|------:|
+| DictionaryAccess |   1000 |   360.0 ns |    NA |
+| DictionaryAccess |  10000 |   345.0 ns |    NA |
+| DictionaryAccess | 100000 | 1,100.0 ns |    NA |
+
+// * Warnings *
+MinIterationTime
+  HashListVsDictionary.DictionaryAccess: InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 4.1000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  HashListVsDictionary.DictionaryAccess: InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 3.9000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  HashListVsDictionary.DictionaryAccess: InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 11.5000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+
+// * Legends *
+  n     : Value of the 'n' parameter
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  1 ns  : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:03 (3.46 sec), executed benchmarks: 3
+
+Global total time: 00:00:27 (27.63 sec), executed benchmarks: 3
+// * Artifacts cleanup *

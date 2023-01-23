@@ -1,0 +1,522 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 6 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4
+// command took 2.74s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4
+// command took 18.46s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4
+// command took 6.19s and exited with 0
+// ***** Done, took 00:00:27 (27.74 sec)   *****
+// Found 6 benchmarks:
+//   HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+//   HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+//   HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+//   HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+//   HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+//   HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 77502169-b362-4299-842d-e855dc4c4ee4.dll --anonymousPipes 2620 2564 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.HashListAccess(n: 1000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-PTOGNY(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 942000.00 ns, 942.0000 us/op
+WorkloadJitting  1: 1 op, 6031000.00 ns, 6.0310 ms/op
+
+OverheadWarmup   1: 10 op, 4600.00 ns, 460.0000 ns/op
+OverheadWarmup   2: 10 op, 2100.00 ns, 210.0000 ns/op
+OverheadWarmup   3: 10 op, 9300.00 ns, 930.0000 ns/op
+OverheadWarmup   4: 10 op, 3700.00 ns, 370.0000 ns/op
+OverheadWarmup   5: 10 op, 1100.00 ns, 110.0000 ns/op
+OverheadWarmup   6: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadWarmup   7: 10 op, 1100.00 ns, 110.0000 ns/op
+OverheadWarmup   8: 10 op, 700.00 ns, 70.0000 ns/op
+
+OverheadActual   1: 10 op, 2700.00 ns, 270.0000 ns/op
+OverheadActual   2: 10 op, 2000.00 ns, 200.0000 ns/op
+OverheadActual   3: 10 op, 2600.00 ns, 260.0000 ns/op
+OverheadActual   4: 10 op, 3200.00 ns, 320.0000 ns/op
+OverheadActual   5: 10 op, 2600.00 ns, 260.0000 ns/op
+OverheadActual   6: 10 op, 3900.00 ns, 390.0000 ns/op
+OverheadActual   7: 10 op, 1800.00 ns, 180.0000 ns/op
+OverheadActual   8: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual   9: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  10: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadActual  11: 10 op, 900.00 ns, 90.0000 ns/op
+OverheadActual  12: 10 op, 1500.00 ns, 150.0000 ns/op
+OverheadActual  13: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadActual  14: 10 op, 2800.00 ns, 280.0000 ns/op
+OverheadActual  15: 10 op, 1900.00 ns, 190.0000 ns/op
+OverheadActual  16: 10 op, 3900.00 ns, 390.0000 ns/op
+OverheadActual  17: 10 op, 2900.00 ns, 290.0000 ns/op
+OverheadActual  18: 10 op, 10100.00 ns, 1.0100 us/op
+OverheadActual  19: 10 op, 3900.00 ns, 390.0000 ns/op
+OverheadActual  20: 10 op, 2400.00 ns, 240.0000 ns/op
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'index')
+   at System.Linq.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument)
+   at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)
+   at DataStructureBenchmarkDotnet.HashListVsDictionary.HashListAccess() in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\HashListVsDictionary.cs:line 47
+   at BenchmarkDotNet.Autogenerated.Runnable_0.WorkloadActionUnroll(Int64 invokeCount) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 281
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineStage.Run(IStoppingCriteria criteria, Int64 invokeCount, IterationMode mode, IterationStage stage, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineWarmupStage.Run(Int64 invokeCount, IterationMode iterationMode, Int32 unrollFactor, RunStrategy runStrategy)
+   at BenchmarkDotNet.Engines.EngineWarmupStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, RunStrategy runStrategy)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_0.Run(IHost host, String benchmarkName) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 182
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 28540 has exited with code -1.
+
+// ** Remained 5 (83.3%) benchmark(s) to run. Estimated finish 2023-01-21 22:17 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 77502169-b362-4299-842d-e855dc4c4ee4.dll --anonymousPipes 2620 2564 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.DictionaryAccess(n: 1000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-XXAIGS(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 759800.00 ns, 759.8000 us/op
+WorkloadJitting  1: 1 op, 1263600.00 ns, 1.2636 ms/op
+
+OverheadWarmup   1: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadWarmup   2: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   3: 10 op, 2300.00 ns, 230.0000 ns/op
+OverheadWarmup   4: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   5: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   6: 10 op, 500.00 ns, 50.0000 ns/op
+
+OverheadActual   1: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual   2: 10 op, 1300.00 ns, 130.0000 ns/op
+OverheadActual   3: 10 op, 1000.00 ns, 100.0000 ns/op
+OverheadActual   4: 10 op, 1300.00 ns, 130.0000 ns/op
+OverheadActual   5: 10 op, 1200.00 ns, 120.0000 ns/op
+OverheadActual   6: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   7: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   8: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   9: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  10: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  11: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  12: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  13: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  14: 10 op, 1200.00 ns, 120.0000 ns/op
+OverheadActual  15: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  16: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  17: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  18: 10 op, 1900.00 ns, 190.0000 ns/op
+OverheadActual  19: 10 op, 6400.00 ns, 640.0000 ns/op
+OverheadActual  20: 10 op, 500.00 ns, 50.0000 ns/op
+
+WorkloadWarmup   1: 10 op, 1800.00 ns, 180.0000 ns/op
+WorkloadWarmup   2: 10 op, 2800.00 ns, 280.0000 ns/op
+WorkloadWarmup   3: 10 op, 6300.00 ns, 630.0000 ns/op
+WorkloadWarmup   4: 10 op, 7300.00 ns, 730.0000 ns/op
+WorkloadWarmup   5: 10 op, 16000.00 ns, 1.6000 us/op
+WorkloadWarmup   6: 10 op, 6000.00 ns, 600.0000 ns/op
+WorkloadWarmup   7: 10 op, 3200.00 ns, 320.0000 ns/op
+WorkloadWarmup   8: 10 op, 5000.00 ns, 500.0000 ns/op
+WorkloadWarmup   9: 10 op, 11100.00 ns, 1.1100 us/op
+WorkloadWarmup  10: 10 op, 4900.00 ns, 490.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 4200.00 ns, 420.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 3700.00 ns, 370.0000 ns/op
+
+// AfterAll
+// Benchmark Process 26272 has exited with code 0.
+
+Mean = 370.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 370.000 ns, Q1 = 370.000 ns, Median = 370.000 ns, Q3 = 370.000 ns, Max = 370.000 ns
+IQR = 0.000 ns, LowerFence = 370.000 ns, UpperFence = 370.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 4 (66.7%) benchmark(s) to run. Estimated finish 2023-01-21 22:17 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 77502169-b362-4299-842d-e855dc4c4ee4.dll --anonymousPipes 2640 2628 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.HashListAccess(n: 10000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 2 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-KPAWXO(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 441500.00 ns, 441.5000 us/op
+WorkloadJitting  1: 1 op, 1127000.00 ns, 1.1270 ms/op
+
+OverheadWarmup   1: 10 op, 900.00 ns, 90.0000 ns/op
+OverheadWarmup   2: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   3: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   4: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   5: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadWarmup   6: 10 op, 500.00 ns, 50.0000 ns/op
+
+OverheadActual   1: 10 op, 3200.00 ns, 320.0000 ns/op
+OverheadActual   2: 10 op, 2100.00 ns, 210.0000 ns/op
+OverheadActual   3: 10 op, 2100.00 ns, 210.0000 ns/op
+OverheadActual   4: 10 op, 2900.00 ns, 290.0000 ns/op
+OverheadActual   5: 10 op, 3200.00 ns, 320.0000 ns/op
+OverheadActual   6: 10 op, 1100.00 ns, 110.0000 ns/op
+OverheadActual   7: 10 op, 1300.00 ns, 130.0000 ns/op
+OverheadActual   8: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   9: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  10: 10 op, 1200.00 ns, 120.0000 ns/op
+OverheadActual  11: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  12: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  13: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  14: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  15: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  16: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  17: 10 op, 900.00 ns, 90.0000 ns/op
+OverheadActual  18: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  19: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadActual  20: 10 op, 600.00 ns, 60.0000 ns/op
+
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'index')
+   at System.Linq.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument)
+   at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)
+   at DataStructureBenchmarkDotnet.HashListVsDictionary.HashListAccess() in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\HashListVsDictionary.cs:line 47
+   at BenchmarkDotNet.Autogenerated.Runnable_2.WorkloadActionUnroll(Int64 invokeCount) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 629
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineStage.Run(IStoppingCriteria criteria, Int64 invokeCount, IterationMode mode, IterationStage stage, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineWarmupStage.Run(Int64 invokeCount, IterationMode iterationMode, Int32 unrollFactor, RunStrategy runStrategy)
+   at BenchmarkDotNet.Engines.EngineWarmupStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, RunStrategy runStrategy)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_2.Run(IHost host, String benchmarkName) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 530
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 19128 has exited with code -1.
+
+// ** Remained 3 (50.0%) benchmark(s) to run. Estimated finish 2023-01-21 22:17 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 77502169-b362-4299-842d-e855dc4c4ee4.dll --anonymousPipes 2236 2548 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.DictionaryAccess(n: 10000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 3 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-SCHBQU(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 344400.00 ns, 344.4000 us/op
+WorkloadJitting  1: 1 op, 1093200.00 ns, 1.0932 ms/op
+
+OverheadWarmup   1: 10 op, 1500.00 ns, 150.0000 ns/op
+OverheadWarmup   2: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadWarmup   3: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   4: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadWarmup   5: 10 op, 1000.00 ns, 100.0000 ns/op
+OverheadWarmup   6: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadWarmup   7: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadWarmup   8: 10 op, 500.00 ns, 50.0000 ns/op
+
+OverheadActual   1: 10 op, 1300.00 ns, 130.0000 ns/op
+OverheadActual   2: 10 op, 2100.00 ns, 210.0000 ns/op
+OverheadActual   3: 10 op, 27500.00 ns, 2.7500 us/op
+OverheadActual   4: 10 op, 1400.00 ns, 140.0000 ns/op
+OverheadActual   5: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   6: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   7: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadActual   8: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadActual   9: 10 op, 2000.00 ns, 200.0000 ns/op
+OverheadActual  10: 10 op, 1400.00 ns, 140.0000 ns/op
+OverheadActual  11: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  12: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  13: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  14: 10 op, 1500.00 ns, 150.0000 ns/op
+OverheadActual  15: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  16: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  17: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  18: 10 op, 2100.00 ns, 210.0000 ns/op
+OverheadActual  19: 10 op, 7700.00 ns, 770.0000 ns/op
+OverheadActual  20: 10 op, 800.00 ns, 80.0000 ns/op
+
+WorkloadWarmup   1: 10 op, 5200.00 ns, 520.0000 ns/op
+WorkloadWarmup   2: 10 op, 1900.00 ns, 190.0000 ns/op
+WorkloadWarmup   3: 10 op, 14300.00 ns, 1.4300 us/op
+WorkloadWarmup   4: 10 op, 12500.00 ns, 1.2500 us/op
+WorkloadWarmup   5: 10 op, 22300.00 ns, 2.2300 us/op
+WorkloadWarmup   6: 10 op, 2700.00 ns, 270.0000 ns/op
+WorkloadWarmup   7: 10 op, 3000.00 ns, 300.0000 ns/op
+WorkloadWarmup   8: 10 op, 15800.00 ns, 1.5800 us/op
+WorkloadWarmup   9: 10 op, 6000.00 ns, 600.0000 ns/op
+WorkloadWarmup  10: 10 op, 6300.00 ns, 630.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 13400.00 ns, 1.3400 us/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 12600.00 ns, 1.2600 us/op
+
+// AfterAll
+// Benchmark Process 26792 has exited with code 0.
+
+Mean = 1.260 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.260 μs, Q1 = 1.260 μs, Median = 1.260 μs, Q3 = 1.260 μs, Max = 1.260 μs
+IQR = 0.000 μs, LowerFence = 1.260 μs, UpperFence = 1.260 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 2 (33.3%) benchmark(s) to run. Estimated finish 2023-01-21 22:17 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 77502169-b362-4299-842d-e855dc4c4ee4.dll --anonymousPipes 2616 2476 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.HashListAccess(n: 100000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 4 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-GDVESI(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 460400.00 ns, 460.4000 us/op
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'index')
+   at System.Linq.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument)
+   at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)
+   at DataStructureBenchmarkDotnet.HashListVsDictionary.HashListAccess() in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\HashListVsDictionary.cs:line 47
+   at BenchmarkDotNet.Autogenerated.Runnable_4.WorkloadActionUnroll(Int64 invokeCount) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 977
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineFactory.Jit(Engine engine, Int32 jitIndex, Int32 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   at BenchmarkDotNet.Autogenerated.Runnable_4.Run(IHost host, String benchmarkName) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 876
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\77502169-b362-4299-842d-e855dc4c4ee4.notcs:line 57
+// AfterAll
+No Workload Results were obtained from the run.
+// Benchmark Process 32704 has exited with code -1.
+
+// ** Remained 1 (16.7%) benchmark(s) to run. Estimated finish 2023-01-21 22:17 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 77502169-b362-4299-842d-e855dc4c4ee4.dll --anonymousPipes 2512 2580 --benchmarkName "DataStructureBenchmarkDotnet.HashListVsDictionary.DictionaryAccess(n: 100000)" --job "InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 5 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\77502169-b362-4299-842d-e855dc4c4ee4\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-YBMQTH(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 367900.00 ns, 367.9000 us/op
+WorkloadJitting  1: 1 op, 519600.00 ns, 519.6000 us/op
+
+OverheadWarmup   1: 10 op, 1500.00 ns, 150.0000 ns/op
+OverheadWarmup   2: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadWarmup   3: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadWarmup   4: 10 op, 4300.00 ns, 430.0000 ns/op
+OverheadWarmup   5: 10 op, 900.00 ns, 90.0000 ns/op
+OverheadWarmup   6: 10 op, 1300.00 ns, 130.0000 ns/op
+OverheadWarmup   7: 10 op, 600.00 ns, 60.0000 ns/op
+
+OverheadActual   1: 10 op, 1100.00 ns, 110.0000 ns/op
+OverheadActual   2: 10 op, 700.00 ns, 70.0000 ns/op
+OverheadActual   3: 10 op, 1300.00 ns, 130.0000 ns/op
+OverheadActual   4: 10 op, 1700.00 ns, 170.0000 ns/op
+OverheadActual   5: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual   6: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual   7: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual   8: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual   9: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  10: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  11: 10 op, 800.00 ns, 80.0000 ns/op
+OverheadActual  12: 10 op, 3100.00 ns, 310.0000 ns/op
+OverheadActual  13: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  14: 10 op, 9500.00 ns, 950.0000 ns/op
+OverheadActual  15: 10 op, 600.00 ns, 60.0000 ns/op
+OverheadActual  16: 10 op, 1500.00 ns, 150.0000 ns/op
+OverheadActual  17: 10 op, 400.00 ns, 40.0000 ns/op
+OverheadActual  18: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  19: 10 op, 500.00 ns, 50.0000 ns/op
+OverheadActual  20: 10 op, 500.00 ns, 50.0000 ns/op
+
+WorkloadWarmup   1: 10 op, 8000.00 ns, 800.0000 ns/op
+WorkloadWarmup   2: 10 op, 14700.00 ns, 1.4700 us/op
+WorkloadWarmup   3: 10 op, 44200.00 ns, 4.4200 us/op
+WorkloadWarmup   4: 10 op, 15000.00 ns, 1.5000 us/op
+WorkloadWarmup   5: 10 op, 13000.00 ns, 1.3000 us/op
+WorkloadWarmup   6: 10 op, 3500.00 ns, 350.0000 ns/op
+WorkloadWarmup   7: 10 op, 10300.00 ns, 1.0300 us/op
+WorkloadWarmup   8: 10 op, 29400.00 ns, 2.9400 us/op
+WorkloadWarmup   9: 10 op, 4000.00 ns, 400.0000 ns/op
+WorkloadWarmup  10: 10 op, 68100.00 ns, 6.8100 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 39600.00 ns, 3.9600 us/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 39000.00 ns, 3.9000 us/op
+
+// AfterAll
+// Benchmark Process 30616 has exited with code 0.
+
+Mean = 3.900 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 3.900 μs, Q1 = 3.900 μs, Median = 3.900 μs, Q3 = 3.900 μs, Max = 3.900 μs
+IQR = 0.000 μs, LowerFence = 3.900 μs, UpperFence = 3.900 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2023-01-21 22:17 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\DataStructureBenchmarkDotnet.HashListVsDictionary-report.csv
+  BenchmarkDotNet.Artifacts\results\DataStructureBenchmarkDotnet.HashListVsDictionary-report-github.md
+  BenchmarkDotNet.Artifacts\results\DataStructureBenchmarkDotnet.HashListVsDictionary-report.html
+
+// * Detailed results *
+HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 370.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 370.000 ns, Q1 = 370.000 ns, Median = 370.000 ns, Q3 = 370.000 ns, Max = 370.000 ns
+IQR = 0.000 ns, LowerFence = 370.000 ns, UpperFence = 370.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[369.500 ns ; 370.500 ns) | @
+---------------------------------------------------
+
+HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.260 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.260 μs, Q1 = 1.260 μs, Median = 1.260 μs, Q3 = 1.260 μs, Max = 1.260 μs
+IQR = 0.000 μs, LowerFence = 1.260 μs, UpperFence = 1.260 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.260 μs ; 1.260 μs) | @
+---------------------------------------------------
+
+HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+There are not any results runs
+
+HashListVsDictionary.DictionaryAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 3.900 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 3.900 μs, Q1 = 3.900 μs, Median = 3.900 μs, Q3 = 3.900 μs, Max = 3.900 μs
+IQR = 0.000 μs, LowerFence = 3.900 μs, UpperFence = 3.900 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[3.900 μs ; 3.901 μs) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.4, OS=Windows 10 (10.0.19044.2364/21H2/November2021Update)
+Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+  Job-UHETPW : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+
+InvocationCount=10  IterationCount=1  LaunchCount=1  
+UnrollFactor=1  WarmupCount=10  
+
+|           Method |      n |       Mean | Error |
+|----------------- |------- |-----------:|------:|
+|   HashListAccess |   1000 |         NA |    NA |
+| DictionaryAccess |   1000 |   370.0 ns |    NA |
+|   HashListAccess |  10000 |         NA |    NA |
+| DictionaryAccess |  10000 | 1,260.0 ns |    NA |
+|   HashListAccess | 100000 |         NA |    NA |
+| DictionaryAccess | 100000 | 3,900.0 ns |    NA |
+
+Benchmarks with issues:
+  HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+  HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+  HashListVsDictionary.HashListAccess: Job-UHETPW(InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+
+// * Warnings *
+Environment
+  Summary -> Detected error exit code from one of the benchmarks. It might be caused by following antivirus software:
+        - Trellix Endpoint Security (C:\Program Files (x86)\McAfee\Endpoint Security\Threat Prevention\AMCFG.EXE)
+        - Windows Defender (windowsdefender://)
+Use InProcessEmitToolchain or InProcessNoEmitToolchain to avoid new process creation.
+
+MinIterationTime
+  HashListVsDictionary.DictionaryAccess: InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 4.2000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  HashListVsDictionary.DictionaryAccess: InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 13.4000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  HashListVsDictionary.DictionaryAccess: InvocationCount=10, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 39.6000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+
+// * Legends *
+  n     : Value of the 'n' parameter
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  1 ns  : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:10 (10.23 sec), executed benchmarks: 6
+
+Global total time: 00:00:40 (40.35 sec), executed benchmarks: 6
+// * Artifacts cleanup *

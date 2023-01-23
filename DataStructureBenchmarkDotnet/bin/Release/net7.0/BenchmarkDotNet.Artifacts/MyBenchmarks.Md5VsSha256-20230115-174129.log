@@ -1,0 +1,197 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\5c5bef53-5bdd-427b-a9c4-345c43de5e50
+// command took 3.8s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\5c5bef53-5bdd-427b-a9c4-345c43de5e50
+// command took 19.49s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\5c5bef53-5bdd-427b-a9c4-345c43de5e50
+// command took 9.03s and exited with 0
+// ***** Done, took 00:00:33 (33.02 sec)   *****
+// Found 2 benchmarks:
+//   Md5VsSha256.Sha256: Job-ICTCKG(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+//   Md5VsSha256.Md5: Job-ICTCKG(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: Md5VsSha256.Sha256: Job-ICTCKG(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet 5c5bef53-5bdd-427b-a9c4-345c43de5e50.dll --anonymousPipes 1472 1464 --benchmarkName MyBenchmarks.Md5VsSha256.Sha256 --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\5c5bef53-5bdd-427b-a9c4-345c43de5e50\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-WQSDBN(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 5512200.00 ns, 1.1024 ms/op
+WorkloadActual   2: 5 op, 461300.00 ns, 92.2600 us/op
+WorkloadActual   3: 5 op, 1049200.00 ns, 209.8400 us/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 5512200.00 ns, 1.1024 ms/op
+WorkloadResult   2: 5 op, 461300.00 ns, 92.2600 us/op
+WorkloadResult   3: 5 op, 1049200.00 ns, 209.8400 us/op
+
+// AfterAll
+// Benchmark Process 32656 has exited with code 0.
+// Launch: 2 / 2
+// Execute: dotnet 5c5bef53-5bdd-427b-a9c4-345c43de5e50.dll --anonymousPipes 1540 1456 --benchmarkName MyBenchmarks.Md5VsSha256.Sha256 --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\5c5bef53-5bdd-427b-a9c4-345c43de5e50\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-EXIKLU(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 7929000.00 ns, 1.5858 ms/op
+WorkloadActual   2: 5 op, 1070800.00 ns, 214.1600 us/op
+WorkloadActual   3: 5 op, 1119100.00 ns, 223.8200 us/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 7929000.00 ns, 1.5858 ms/op
+WorkloadResult   2: 5 op, 1070800.00 ns, 214.1600 us/op
+WorkloadResult   3: 5 op, 1119100.00 ns, 223.8200 us/op
+
+// AfterAll
+// Benchmark Process 32236 has exited with code 0.
+
+Mean = 571.387 μs, StdErr = 252.965 μs (44.27%), N = 6, StdDev = 619.636 μs
+Min = 92.260 μs, Q1 = 210.920 μs, Median = 218.990 μs, Q3 = 882.785 μs, Max = 1,585.800 μs
+IQR = 671.865 μs, LowerFence = -796.878 μs, UpperFence = 1,890.582 μs
+ConfidenceInterval = [-1,166.188 μs; 2,308.962 μs] (CI 99.9%), Margin = 1,737.575 μs (304.10% of Mean)
+Skewness = 0.66, Kurtosis = 1.4, MValue = 2
+
+// ** Remained 1 (50.0%) benchmark(s) to run. Estimated finish 2023-01-15 17:42 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: Md5VsSha256.Md5: Job-ICTCKG(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet 5c5bef53-5bdd-427b-a9c4-345c43de5e50.dll --anonymousPipes 1424 1464 --benchmarkName MyBenchmarks.Md5VsSha256.Md5 --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\5c5bef53-5bdd-427b-a9c4-345c43de5e50\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-BQDNNV(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 7740600.00 ns, 1.5481 ms/op
+WorkloadActual   2: 5 op, 246700.00 ns, 49.3400 us/op
+WorkloadActual   3: 5 op, 146800.00 ns, 29.3600 us/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 7740600.00 ns, 1.5481 ms/op
+WorkloadResult   2: 5 op, 246700.00 ns, 49.3400 us/op
+WorkloadResult   3: 5 op, 146800.00 ns, 29.3600 us/op
+
+// AfterAll
+// Benchmark Process 33020 has exited with code 0.
+// Launch: 2 / 2
+// Execute: dotnet 5c5bef53-5bdd-427b-a9c4-345c43de5e50.dll --anonymousPipes 1508 1356 --benchmarkName MyBenchmarks.Md5VsSha256.Md5 --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\5c5bef53-5bdd-427b-a9c4-345c43de5e50\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-HBCOPO(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 8136400.00 ns, 1.6273 ms/op
+WorkloadActual   2: 5 op, 545600.00 ns, 109.1200 us/op
+WorkloadActual   3: 5 op, 174100.00 ns, 34.8200 us/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 8136400.00 ns, 1.6273 ms/op
+WorkloadResult   2: 5 op, 545600.00 ns, 109.1200 us/op
+WorkloadResult   3: 5 op, 174100.00 ns, 34.8200 us/op
+
+// AfterAll
+// Benchmark Process 17668 has exited with code 0.
+
+Mean = 566.340 μs, StdErr = 323.352 μs (57.09%), N = 6, StdDev = 792.046 μs
+Min = 29.360 μs, Q1 = 38.450 μs, Median = 79.230 μs, Q3 = 1,188.370 μs, Max = 1,627.280 μs
+IQR = 1,149.920 μs, LowerFence = -1,686.430 μs, UpperFence = 2,913.250 μs
+ConfidenceInterval = [-1,654.705 μs; 2,787.385 μs] (CI 99.9%), Margin = 2,221.045 μs (392.18% of Mean)
+Skewness = 0.54, Kurtosis = 1.05, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2023-01-15 17:42 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.Md5VsSha256-report.csv
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.Md5VsSha256-report-github.md
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.Md5VsSha256-report.html
+
+// * Detailed results *
+Md5VsSha256.Sha256: Job-ICTCKG(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 571.387 μs, StdErr = 252.965 μs (44.27%), N = 6, StdDev = 619.636 μs
+Min = 92.260 μs, Q1 = 210.920 μs, Median = 218.990 μs, Q3 = 882.785 μs, Max = 1,585.800 μs
+IQR = 671.865 μs, LowerFence = -796.878 μs, UpperFence = 1,890.582 μs
+ConfidenceInterval = [-1,166.188 μs; 2,308.962 μs] (CI 99.9%), Margin = 1,737.575 μs (304.10% of Mean)
+Skewness = 0.66, Kurtosis = 1.4, MValue = 2
+-------------------- Histogram --------------------
+[-355.301 μs ;   605.601 μs) | @@@@
+[ 605.601 μs ; 1,791.681 μs) | @@
+---------------------------------------------------
+
+Md5VsSha256.Md5: Job-ICTCKG(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 566.340 μs, StdErr = 323.352 μs (57.09%), N = 6, StdDev = 792.046 μs
+Min = 29.360 μs, Q1 = 38.450 μs, Median = 79.230 μs, Q3 = 1,188.370 μs, Max = 1,627.280 μs
+IQR = 1,149.920 μs, LowerFence = -1,686.430 μs, UpperFence = 2,913.250 μs
+ConfidenceInterval = [-1,654.705 μs; 2,787.385 μs] (CI 99.9%), Margin = 2,221.045 μs (392.18% of Mean)
+Skewness = 0.54, Kurtosis = 1.05, MValue = 2
+-------------------- Histogram --------------------
+[-542.732 μs ;   641.332 μs) | @@@@
+[ 641.332 μs ; 2,199.372 μs) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.4, OS=Windows 10 (10.0.19044.2364/21H2/November2021Update)
+Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2 [AttachedDebugger]
+  Job-ICTCKG : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+
+InvocationCount=5  IterationCount=3  LaunchCount=2  
+RunStrategy=ColdStart  UnrollFactor=1  
+
+| Method |     Mean |      Error |   StdDev |    Median |
+|------- |---------:|-----------:|---------:|----------:|
+| Sha256 | 571.4 μs | 1,737.6 μs | 619.6 μs | 218.99 μs |
+|    Md5 | 566.3 μs | 2,221.0 μs | 792.0 μs |  79.23 μs |
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+MinIterationTime
+  Md5VsSha256.Sha256: InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1 -> The minimum observed iteration time is 461.3000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  Md5VsSha256.Md5: InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1    -> The minimum observed iteration time is 146.8000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+ZeroMeasurement
+  Md5VsSha256.Md5: InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1 -> The method duration is indistinguishable from the empty method duration
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 μs   : 1 Microsecond (0.000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:04 (4.62 sec), executed benchmarks: 2
+
+Global total time: 00:00:40 (40.54 sec), executed benchmarks: 2
+// * Artifacts cleanup *

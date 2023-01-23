@@ -1,0 +1,64 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 4 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\bafff312-596c-46fe-81be-bb5863538ac8
+// command took 3.5s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\bafff312-596c-46fe-81be-bb5863538ac8
+// command took 18.16s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\bafff312-596c-46fe-81be-bb5863538ac8
+// command took 5.22s and exited with 0
+// ***** Done, took 00:00:28 (28.01 sec)   *****
+// Found 4 benchmarks:
+//   ListVsQueue.ListAdd: Job-NFVEEL(InvocationCount=1000, UnrollFactor=1)
+//   ListVsQueue.QueueAdd: Job-NFVEEL(InvocationCount=1000, UnrollFactor=1)
+//   ListVsQueue.ListRemove: Job-NFVEEL(InvocationCount=1000, UnrollFactor=1)
+//   ListVsQueue.QueueRemove: Job-NFVEEL(InvocationCount=1000, UnrollFactor=1)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ListVsQueue.ListAdd: Job-NFVEEL(InvocationCount=1000, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet bafff312-596c-46fe-81be-bb5863538ac8.dll --anonymousPipes 1836 1376 --benchmarkName MyBenchmarks.ListVsQueue.ListAdd --job "InvocationCount=1000, UnrollFactor=1" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\bafff312-596c-46fe-81be-bb5863538ac8\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-UMZNCC(InvocationCount=1000, UnrollFactor=1)
+
+OverheadJitting  1: 1 op, 361500.00 ns, 361.5000 us/op
+WorkloadJitting  1: 1 op, 101301800.00 ns, 101.3018 ms/op
+
+OverheadWarmup   1: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadWarmup   2: 1000 op, 3500.00 ns, 3.5000 ns/op
+OverheadWarmup   3: 1000 op, 2600.00 ns, 2.6000 ns/op
+OverheadWarmup   4: 1000 op, 2700.00 ns, 2.7000 ns/op
+OverheadWarmup   5: 1000 op, 2700.00 ns, 2.7000 ns/op
+
+OverheadActual   1: 1000 op, 3100.00 ns, 3.1000 ns/op
+OverheadActual   2: 1000 op, 3800.00 ns, 3.8000 ns/op
+OverheadActual   3: 1000 op, 3300.00 ns, 3.3000 ns/op
+OverheadActual   4: 1000 op, 3700.00 ns, 3.7000 ns/op
+OverheadActual   5: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadActual   6: 1000 op, 3100.00 ns, 3.1000 ns/op
+OverheadActual   7: 1000 op, 3300.00 ns, 3.3000 ns/op
+OverheadActual   8: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadActual   9: 1000 op, 3900.00 ns, 3.9000 ns/op
+OverheadActual  10: 1000 op, 3500.00 ns, 3.5000 ns/op
+OverheadActual  11: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadActual  12: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadActual  13: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadActual  14: 1000 op, 3500.00 ns, 3.5000 ns/op
+OverheadActual  15: 1000 op, 4900.00 ns, 4.9000 ns/op
+OverheadActual  16: 1000 op, 5600.00 ns, 5.6000 ns/op
+OverheadActual  17: 1000 op, 3300.00 ns, 3.3000 ns/op
+OverheadActual  18: 1000 op, 4300.00 ns, 4.3000 ns/op
+OverheadActual  19: 1000 op, 5900.00 ns, 5.9000 ns/op
+OverheadActual  20: 1000 op, 5300.00 ns, 5.3000 ns/op
+
+WorkloadWarmup   1: 1000 op, 101270154500.00 ns, 101.2702 ms/op
+WorkloadWarmup   2: 1000 op, 101214379400.00 ns, 101.2144 ms/op
+WorkloadWarmup   3: 1000 op, 101219407000.00 ns, 101.2194 ms/op

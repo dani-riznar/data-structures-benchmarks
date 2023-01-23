@@ -1,0 +1,1065 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 12 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5
+// command took 1.95s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5
+// command took 4.12s and exited with 0
+// ***** Done, took 00:00:06 (6.39 sec)   *****
+// Found 12 benchmarks:
+//   ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+//   ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+//   ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+//   ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+//   ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+//   ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+//   ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+//   ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+//   ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+//   ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+//   ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+//   ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 2172 2168 --benchmarkName "MyBenchmarks.ArrayVsList.AArrayAdd(n: 1000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-DRZOYY(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 246700.00 ns, 246.7000 us/op
+WorkloadJitting  1: 1 op, 706100.00 ns, 706.1000 us/op
+
+OverheadWarmup   1: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadWarmup   2: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadWarmup   3: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadWarmup   4: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadWarmup   5: 1000 op, 2900.00 ns, 2.9000 ns/op
+
+OverheadActual   1: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadActual   2: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   3: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   4: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   5: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   6: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   7: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   8: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   9: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual  10: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  11: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual  12: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  13: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  14: 1000 op, 2600.00 ns, 2.6000 ns/op
+OverheadActual  15: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadActual  16: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  17: 1000 op, 3300.00 ns, 3.3000 ns/op
+OverheadActual  18: 1000 op, 2700.00 ns, 2.7000 ns/op
+OverheadActual  19: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadActual  20: 1000 op, 2300.00 ns, 2.3000 ns/op
+
+WorkloadWarmup   1: 1000 op, 42620100.00 ns, 42.6201 us/op
+WorkloadWarmup   2: 1000 op, 39435100.00 ns, 39.4351 us/op
+WorkloadWarmup   3: 1000 op, 29733000.00 ns, 29.7330 us/op
+WorkloadWarmup   4: 1000 op, 31252400.00 ns, 31.2524 us/op
+WorkloadWarmup   5: 1000 op, 38137700.00 ns, 38.1377 us/op
+WorkloadWarmup   6: 1000 op, 29065200.00 ns, 29.0652 us/op
+WorkloadWarmup   7: 1000 op, 25404500.00 ns, 25.4045 us/op
+WorkloadWarmup   8: 1000 op, 25254900.00 ns, 25.2549 us/op
+WorkloadWarmup   9: 1000 op, 23941200.00 ns, 23.9412 us/op
+WorkloadWarmup  10: 1000 op, 17044900.00 ns, 17.0449 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 37547700.00 ns, 37.5477 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 37545250.00 ns, 37.5453 us/op
+
+// AfterAll
+// Benchmark Process 32444 has exited with code 0.
+
+Mean = 37.545 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 37.545 μs, Q1 = 37.545 μs, Median = 37.545 μs, Q3 = 37.545 μs, Max = 37.545 μs
+IQR = 0.000 μs, LowerFence = 37.545 μs, UpperFence = 37.545 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 11 (91.7%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 2020 2100 --benchmarkName "MyBenchmarks.ArrayVsList.BListAdd(n: 1000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-JNLMAA(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 220400.00 ns, 220.4000 us/op
+WorkloadJitting  1: 1 op, 237300.00 ns, 237.3000 us/op
+
+OverheadWarmup   1: 1000 op, 6100.00 ns, 6.1000 ns/op
+OverheadWarmup   2: 1000 op, 3400.00 ns, 3.4000 ns/op
+OverheadWarmup   3: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadWarmup   4: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   5: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   6: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   7: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   8: 1000 op, 2300.00 ns, 2.3000 ns/op
+
+OverheadActual   1: 1000 op, 3200.00 ns, 3.2000 ns/op
+OverheadActual   2: 1000 op, 4200.00 ns, 4.2000 ns/op
+OverheadActual   3: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadActual   4: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadActual   5: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   6: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   7: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   8: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   9: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  10: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  11: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  12: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  13: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  14: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  15: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  16: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  17: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+WorkloadWarmup   1: 1000 op, 14832500.00 ns, 14.8325 us/op
+WorkloadWarmup   2: 1000 op, 6974400.00 ns, 6.9744 us/op
+WorkloadWarmup   3: 1000 op, 4810000.00 ns, 4.8100 us/op
+WorkloadWarmup   4: 1000 op, 10891700.00 ns, 10.8917 us/op
+WorkloadWarmup   5: 1000 op, 9122400.00 ns, 9.1224 us/op
+WorkloadWarmup   6: 1000 op, 6859000.00 ns, 6.8590 us/op
+WorkloadWarmup   7: 1000 op, 11120200.00 ns, 11.1202 us/op
+WorkloadWarmup   8: 1000 op, 8180800.00 ns, 8.1808 us/op
+WorkloadWarmup   9: 1000 op, 8515100.00 ns, 8.5151 us/op
+WorkloadWarmup  10: 1000 op, 10457800.00 ns, 10.4578 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 9026700.00 ns, 9.0267 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 9024500.00 ns, 9.0245 us/op
+
+// AfterAll
+// Benchmark Process 29600 has exited with code 0.
+
+Mean = 9.024 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 9.024 μs, Q1 = 9.024 μs, Median = 9.024 μs, Q3 = 9.024 μs, Max = 9.024 μs
+IQR = 0.000 μs, LowerFence = 9.024 μs, UpperFence = 9.024 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 10 (83.3%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 2084 2156 --benchmarkName "MyBenchmarks.ArrayVsList.CListFor(n: 1000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 2 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-UIYWSA(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 191900.00 ns, 191.9000 us/op
+WorkloadJitting  1: 1 op, 266100.00 ns, 266.1000 us/op
+
+OverheadWarmup   1: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   2: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   3: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadWarmup   4: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   5: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   6: 1000 op, 2300.00 ns, 2.3000 ns/op
+
+OverheadActual   1: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   2: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   3: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   4: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   5: 1000 op, 34200.00 ns, 34.2000 ns/op
+OverheadActual   6: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadActual   7: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   8: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   9: 1000 op, 25900.00 ns, 25.9000 ns/op
+OverheadActual  10: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  11: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  12: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  13: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadActual  14: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual  15: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual  16: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  17: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  18: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual  19: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual  20: 1000 op, 2500.00 ns, 2.5000 ns/op
+
+WorkloadWarmup   1: 1000 op, 4100.00 ns, 4.1000 ns/op
+WorkloadWarmup   2: 1000 op, 3700.00 ns, 3.7000 ns/op
+WorkloadWarmup   3: 1000 op, 3700.00 ns, 3.7000 ns/op
+WorkloadWarmup   4: 1000 op, 3700.00 ns, 3.7000 ns/op
+WorkloadWarmup   5: 1000 op, 3700.00 ns, 3.7000 ns/op
+WorkloadWarmup   6: 1000 op, 3800.00 ns, 3.8000 ns/op
+WorkloadWarmup   7: 1000 op, 3800.00 ns, 3.8000 ns/op
+WorkloadWarmup   8: 1000 op, 3700.00 ns, 3.7000 ns/op
+WorkloadWarmup   9: 1000 op, 3700.00 ns, 3.7000 ns/op
+WorkloadWarmup  10: 1000 op, 3600.00 ns, 3.6000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 4100.00 ns, 4.1000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 1650.00 ns, 1.6500 ns/op
+
+// AfterAll
+// Benchmark Process 29008 has exited with code 0.
+
+Mean = 1.650 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 1.650 ns, Q1 = 1.650 ns, Median = 1.650 ns, Q3 = 1.650 ns, Max = 1.650 ns
+IQR = 0.000 ns, LowerFence = 1.650 ns, UpperFence = 1.650 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 9 (75.0%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 2152 2028 --benchmarkName "MyBenchmarks.ArrayVsList.DArrayFor(n: 1000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 3 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-KNSLNZ(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 281000.00 ns, 281.0000 us/op
+WorkloadJitting  1: 1 op, 620300.00 ns, 620.3000 us/op
+
+OverheadWarmup   1: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   2: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   3: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   4: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   5: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   6: 1000 op, 23600.00 ns, 23.6000 ns/op
+
+OverheadActual   1: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   2: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   3: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   4: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   5: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   6: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   7: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   8: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   9: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  10: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  11: 1000 op, 3500.00 ns, 3.5000 ns/op
+OverheadActual  12: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadActual  13: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  14: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  15: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  16: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  17: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  18: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  19: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadActual  20: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+WorkloadWarmup   1: 1000 op, 3026500.00 ns, 3.0265 us/op
+WorkloadWarmup   2: 1000 op, 3509500.00 ns, 3.5095 us/op
+WorkloadWarmup   3: 1000 op, 2371100.00 ns, 2.3711 us/op
+WorkloadWarmup   4: 1000 op, 2790900.00 ns, 2.7909 us/op
+WorkloadWarmup   5: 1000 op, 2812300.00 ns, 2.8123 us/op
+WorkloadWarmup   6: 1000 op, 3316200.00 ns, 3.3162 us/op
+WorkloadWarmup   7: 1000 op, 2664300.00 ns, 2.6643 us/op
+WorkloadWarmup   8: 1000 op, 2381700.00 ns, 2.3817 us/op
+WorkloadWarmup   9: 1000 op, 2356600.00 ns, 2.3566 us/op
+WorkloadWarmup  10: 1000 op, 2358100.00 ns, 2.3581 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 2392300.00 ns, 2.3923 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 2390100.00 ns, 2.3901 us/op
+
+// AfterAll
+// Benchmark Process 6652 has exited with code 0.
+
+Mean = 2.390 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.390 μs, Q1 = 2.390 μs, Median = 2.390 μs, Q3 = 2.390 μs, Max = 2.390 μs
+IQR = 0.000 μs, LowerFence = 2.390 μs, UpperFence = 2.390 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 8 (66.7%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 1888 1976 --benchmarkName "MyBenchmarks.ArrayVsList.AArrayAdd(n: 10000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 4 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-SRSZTM(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 313400.00 ns, 313.4000 us/op
+WorkloadJitting  1: 1 op, 1611600.00 ns, 1.6116 ms/op
+
+OverheadWarmup   1: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   2: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   3: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   4: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   5: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+OverheadActual   1: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   2: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   3: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   4: 1000 op, 7700.00 ns, 7.7000 ns/op
+OverheadActual   5: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   6: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   7: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   8: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadActual   9: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadActual  10: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadActual  11: 1000 op, 2600.00 ns, 2.6000 ns/op
+OverheadActual  12: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  13: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  14: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  15: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  16: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  17: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  18: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  19: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  20: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+WorkloadWarmup   1: 1000 op, 167764800.00 ns, 167.7648 us/op
+WorkloadWarmup   2: 1000 op, 164423100.00 ns, 164.4231 us/op
+WorkloadWarmup   3: 1000 op, 162697900.00 ns, 162.6979 us/op
+WorkloadWarmup   4: 1000 op, 173012500.00 ns, 173.0125 us/op
+WorkloadWarmup   5: 1000 op, 172690300.00 ns, 172.6903 us/op
+WorkloadWarmup   6: 1000 op, 146460000.00 ns, 146.4600 us/op
+WorkloadWarmup   7: 1000 op, 169202400.00 ns, 169.2024 us/op
+WorkloadWarmup   8: 1000 op, 158412700.00 ns, 158.4127 us/op
+WorkloadWarmup   9: 1000 op, 156509800.00 ns, 156.5098 us/op
+WorkloadWarmup  10: 1000 op, 140238400.00 ns, 140.2384 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 186812000.00 ns, 186.8120 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 186809700.00 ns, 186.8097 us/op
+
+// AfterAll
+// Benchmark Process 4540 has exited with code 0.
+
+Mean = 186.810 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 186.810 μs, Q1 = 186.810 μs, Median = 186.810 μs, Q3 = 186.810 μs, Max = 186.810 μs
+IQR = 0.000 μs, LowerFence = 186.810 μs, UpperFence = 186.810 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 7 (58.3%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 1888 1976 --benchmarkName "MyBenchmarks.ArrayVsList.BListAdd(n: 10000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 5 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-IVVNQC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 241800.00 ns, 241.8000 us/op
+WorkloadJitting  1: 1 op, 383800.00 ns, 383.8000 us/op
+
+OverheadWarmup   1: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   2: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   3: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   4: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   5: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   6: 1000 op, 2300.00 ns, 2.3000 ns/op
+
+OverheadActual   1: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   2: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   3: 1000 op, 3200.00 ns, 3.2000 ns/op
+OverheadActual   4: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   5: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   6: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   7: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   8: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   9: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadActual  10: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadActual  11: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual  12: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  13: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  14: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadActual  15: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  16: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  17: 1000 op, 24200.00 ns, 24.2000 ns/op
+OverheadActual  18: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadActual  19: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadActual  20: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+WorkloadWarmup   1: 1000 op, 57673900.00 ns, 57.6739 us/op
+WorkloadWarmup   2: 1000 op, 37883000.00 ns, 37.8830 us/op
+WorkloadWarmup   3: 1000 op, 53209100.00 ns, 53.2091 us/op
+WorkloadWarmup   4: 1000 op, 36020600.00 ns, 36.0206 us/op
+WorkloadWarmup   5: 1000 op, 48330300.00 ns, 48.3303 us/op
+WorkloadWarmup   6: 1000 op, 39335500.00 ns, 39.3355 us/op
+WorkloadWarmup   7: 1000 op, 50983900.00 ns, 50.9839 us/op
+WorkloadWarmup   8: 1000 op, 36733400.00 ns, 36.7334 us/op
+WorkloadWarmup   9: 1000 op, 52314900.00 ns, 52.3149 us/op
+WorkloadWarmup  10: 1000 op, 39386400.00 ns, 39.3864 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 50901700.00 ns, 50.9017 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 50899400.00 ns, 50.8994 us/op
+
+// AfterAll
+// Benchmark Process 21232 has exited with code 0.
+
+Mean = 50.899 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 50.899 μs, Q1 = 50.899 μs, Median = 50.899 μs, Q3 = 50.899 μs, Max = 50.899 μs
+IQR = 0.000 μs, LowerFence = 50.899 μs, UpperFence = 50.899 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 6 (50.0%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 1832 1824 --benchmarkName "MyBenchmarks.ArrayVsList.CListFor(n: 10000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 6 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-HCRZVL(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 222100.00 ns, 222.1000 us/op
+WorkloadJitting  1: 1 op, 250300.00 ns, 250.3000 us/op
+
+OverheadWarmup   1: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadWarmup   2: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   3: 1000 op, 2700.00 ns, 2.7000 ns/op
+OverheadWarmup   4: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   5: 1000 op, 3300.00 ns, 3.3000 ns/op
+OverheadWarmup   6: 1000 op, 2400.00 ns, 2.4000 ns/op
+
+OverheadActual   1: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   2: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   3: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   4: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   5: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   6: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   7: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   8: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   9: 1000 op, 2100.00 ns, 2.1000 ns/op
+OverheadActual  10: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  11: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  12: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  13: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  14: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  15: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+WorkloadWarmup   1: 1000 op, 4000.00 ns, 4.0000 ns/op
+WorkloadWarmup   2: 1000 op, 3900.00 ns, 3.9000 ns/op
+WorkloadWarmup   3: 1000 op, 3900.00 ns, 3.9000 ns/op
+WorkloadWarmup   4: 1000 op, 4000.00 ns, 4.0000 ns/op
+WorkloadWarmup   5: 1000 op, 3900.00 ns, 3.9000 ns/op
+WorkloadWarmup   6: 1000 op, 3800.00 ns, 3.8000 ns/op
+WorkloadWarmup   7: 1000 op, 3700.00 ns, 3.7000 ns/op
+WorkloadWarmup   8: 1000 op, 3800.00 ns, 3.8000 ns/op
+WorkloadWarmup   9: 1000 op, 3900.00 ns, 3.9000 ns/op
+WorkloadWarmup  10: 1000 op, 3900.00 ns, 3.9000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 368700.00 ns, 368.7000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 366500.00 ns, 366.5000 ns/op
+
+// AfterAll
+// Benchmark Process 6924 has exited with code 0.
+
+Mean = 366.500 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 366.500 ns, Q1 = 366.500 ns, Median = 366.500 ns, Q3 = 366.500 ns, Max = 366.500 ns
+IQR = 0.000 ns, LowerFence = 366.500 ns, UpperFence = 366.500 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 5 (41.7%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 1832 1824 --benchmarkName "MyBenchmarks.ArrayVsList.DArrayFor(n: 10000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 7 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-VXNGDL(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 237800.00 ns, 237.8000 us/op
+WorkloadJitting  1: 1 op, 533200.00 ns, 533.2000 us/op
+
+OverheadWarmup   1: 1000 op, 3400.00 ns, 3.4000 ns/op
+OverheadWarmup   2: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   3: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadWarmup   4: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   5: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   6: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+OverheadActual   1: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadActual   2: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   3: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   4: 1000 op, 3100.00 ns, 3.1000 ns/op
+OverheadActual   5: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   6: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   7: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   8: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   9: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  10: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  11: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  12: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  13: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  14: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  15: 1000 op, 2600.00 ns, 2.6000 ns/op
+OverheadActual  16: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  17: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  18: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  19: 1000 op, 2300.00 ns, 2.3000 ns/op
+
+WorkloadWarmup   1: 1000 op, 7463400.00 ns, 7.4634 us/op
+WorkloadWarmup   2: 1000 op, 7575100.00 ns, 7.5751 us/op
+WorkloadWarmup   3: 1000 op, 7890000.00 ns, 7.8900 us/op
+WorkloadWarmup   4: 1000 op, 7803000.00 ns, 7.8030 us/op
+WorkloadWarmup   5: 1000 op, 7833100.00 ns, 7.8331 us/op
+WorkloadWarmup   6: 1000 op, 10289100.00 ns, 10.2891 us/op
+WorkloadWarmup   7: 1000 op, 8819200.00 ns, 8.8192 us/op
+WorkloadWarmup   8: 1000 op, 8456700.00 ns, 8.4567 us/op
+WorkloadWarmup   9: 1000 op, 9017300.00 ns, 9.0173 us/op
+WorkloadWarmup  10: 1000 op, 8115300.00 ns, 8.1153 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 7343300.00 ns, 7.3433 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 7341000.00 ns, 7.3410 us/op
+
+// AfterAll
+// Benchmark Process 27892 has exited with code 0.
+
+Mean = 7.341 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 7.341 μs, Q1 = 7.341 μs, Median = 7.341 μs, Q3 = 7.341 μs, Max = 7.341 μs
+IQR = 0.000 μs, LowerFence = 7.341 μs, UpperFence = 7.341 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 4 (33.3%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 1844 1888 --benchmarkName "MyBenchmarks.ArrayVsList.AArrayAdd(n: 100000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 8 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-JNBFKS(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 215900.00 ns, 215.9000 us/op
+WorkloadJitting  1: 1 op, 9266400.00 ns, 9.2664 ms/op
+
+OverheadWarmup   1: 1000 op, 3300.00 ns, 3.3000 ns/op
+OverheadWarmup   2: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadWarmup   3: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadWarmup   4: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadWarmup   5: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadWarmup   6: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadWarmup   7: 1000 op, 2500.00 ns, 2.5000 ns/op
+
+OverheadActual   1: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   2: 1000 op, 3100.00 ns, 3.1000 ns/op
+OverheadActual   3: 1000 op, 2900.00 ns, 2.9000 ns/op
+OverheadActual   4: 1000 op, 3500.00 ns, 3.5000 ns/op
+OverheadActual   5: 1000 op, 2600.00 ns, 2.6000 ns/op
+OverheadActual   6: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   7: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual   8: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   9: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  10: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  11: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual  12: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  13: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadActual  14: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  15: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  16: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  17: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  18: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  19: 1000 op, 2400.00 ns, 2.4000 ns/op
+
+WorkloadWarmup   1: 1000 op, 1478035600.00 ns, 1.4780 ms/op
+WorkloadWarmup   2: 1000 op, 1512128800.00 ns, 1.5121 ms/op
+WorkloadWarmup   3: 1000 op, 1542263600.00 ns, 1.5423 ms/op
+WorkloadWarmup   4: 1000 op, 1508609200.00 ns, 1.5086 ms/op
+WorkloadWarmup   5: 1000 op, 1572242900.00 ns, 1.5722 ms/op
+WorkloadWarmup   6: 1000 op, 1495461200.00 ns, 1.4955 ms/op
+WorkloadWarmup   7: 1000 op, 1550515500.00 ns, 1.5505 ms/op
+WorkloadWarmup   8: 1000 op, 1487393200.00 ns, 1.4874 ms/op
+WorkloadWarmup   9: 1000 op, 1533225300.00 ns, 1.5332 ms/op
+WorkloadWarmup  10: 1000 op, 1506114400.00 ns, 1.5061 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1434812100.00 ns, 1.4348 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 1434809700.00 ns, 1.4348 ms/op
+
+// AfterAll
+// Benchmark Process 23700 has exited with code 0.
+
+Mean = 1.435 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 1.435 ms, Q1 = 1.435 ms, Median = 1.435 ms, Q3 = 1.435 ms, Max = 1.435 ms
+IQR = 0.000 ms, LowerFence = 1.435 ms, UpperFence = 1.435 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 3 (25.0%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 1884 1752 --benchmarkName "MyBenchmarks.ArrayVsList.BListAdd(n: 100000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 9 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-OGGQKW(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 205500.00 ns, 205.5000 us/op
+WorkloadJitting  1: 1 op, 1813400.00 ns, 1.8134 ms/op
+
+OverheadWarmup   1: 1000 op, 3600.00 ns, 3.6000 ns/op
+OverheadWarmup   2: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   3: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   4: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   5: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadWarmup   6: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadWarmup   7: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadWarmup   8: 1000 op, 2500.00 ns, 2.5000 ns/op
+
+OverheadActual   1: 1000 op, 5500.00 ns, 5.5000 ns/op
+OverheadActual   2: 1000 op, 22900.00 ns, 22.9000 ns/op
+OverheadActual   3: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   4: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   5: 1000 op, 2700.00 ns, 2.7000 ns/op
+OverheadActual   6: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   7: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   8: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   9: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadActual  10: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  11: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  12: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  13: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  14: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  15: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  16: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  17: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  18: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  19: 1000 op, 2300.00 ns, 2.3000 ns/op
+
+WorkloadWarmup   1: 1000 op, 416784300.00 ns, 416.7843 us/op
+WorkloadWarmup   2: 1000 op, 357288200.00 ns, 357.2882 us/op
+WorkloadWarmup   3: 1000 op, 325297500.00 ns, 325.2975 us/op
+WorkloadWarmup   4: 1000 op, 321849900.00 ns, 321.8499 us/op
+WorkloadWarmup   5: 1000 op, 373377200.00 ns, 373.3772 us/op
+WorkloadWarmup   6: 1000 op, 326063000.00 ns, 326.0630 us/op
+WorkloadWarmup   7: 1000 op, 316590500.00 ns, 316.5905 us/op
+WorkloadWarmup   8: 1000 op, 408138100.00 ns, 408.1381 us/op
+WorkloadWarmup   9: 1000 op, 311908600.00 ns, 311.9086 us/op
+WorkloadWarmup  10: 1000 op, 348324000.00 ns, 348.3240 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 425106200.00 ns, 425.1062 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 425103900.00 ns, 425.1039 us/op
+
+// AfterAll
+// Benchmark Process 29552 has exited with code 0.
+
+Mean = 425.104 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 425.104 μs, Q1 = 425.104 μs, Median = 425.104 μs, Q3 = 425.104 μs, Max = 425.104 μs
+IQR = 0.000 μs, LowerFence = 425.104 μs, UpperFence = 425.104 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 2 (16.7%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 2336 2380 --benchmarkName "MyBenchmarks.ArrayVsList.CListFor(n: 100000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 10 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-YWCVFM(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 197500.00 ns, 197.5000 us/op
+WorkloadJitting  1: 1 op, 179300.00 ns, 179.3000 us/op
+
+OverheadWarmup   1: 1000 op, 3500.00 ns, 3.5000 ns/op
+OverheadWarmup   2: 1000 op, 33700.00 ns, 33.7000 ns/op
+OverheadWarmup   3: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   4: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   5: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadWarmup   6: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+OverheadActual   1: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   2: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   3: 1000 op, 4900.00 ns, 4.9000 ns/op
+OverheadActual   4: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   5: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   6: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   7: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   8: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   9: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  10: 1000 op, 2700.00 ns, 2.7000 ns/op
+OverheadActual  11: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  12: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  13: 1000 op, 2800.00 ns, 2.8000 ns/op
+OverheadActual  14: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  15: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+WorkloadWarmup   1: 1000 op, 4600.00 ns, 4.6000 ns/op
+WorkloadWarmup   2: 1000 op, 4600.00 ns, 4.6000 ns/op
+WorkloadWarmup   3: 1000 op, 5200.00 ns, 5.2000 ns/op
+WorkloadWarmup   4: 1000 op, 4800.00 ns, 4.8000 ns/op
+WorkloadWarmup   5: 1000 op, 4000.00 ns, 4.0000 ns/op
+WorkloadWarmup   6: 1000 op, 3800.00 ns, 3.8000 ns/op
+WorkloadWarmup   7: 1000 op, 3900.00 ns, 3.9000 ns/op
+WorkloadWarmup   8: 1000 op, 4100.00 ns, 4.1000 ns/op
+WorkloadWarmup   9: 1000 op, 3900.00 ns, 3.9000 ns/op
+WorkloadWarmup  10: 1000 op, 5300.00 ns, 5.3000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 4400.00 ns, 4.4000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+// AfterAll
+// Benchmark Process 12128 has exited with code 0.
+
+Mean = 2.200 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 2.200 ns, Q1 = 2.200 ns, Median = 2.200 ns, Q3 = 2.200 ns, Max = 2.200 ns
+IQR = 0.000 ns, LowerFence = 2.200 ns, UpperFence = 2.200 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 1 (8.3%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet ee890554-d8f5-4aef-9179-69dabcee8ae5.dll --anonymousPipes 1684 1844 --benchmarkName "MyBenchmarks.ArrayVsList.DArrayFor(n: 100000)" --job "InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10" --benchmarkId 11 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\ee890554-d8f5-4aef-9179-69dabcee8ae5\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-VBQJDH(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 313300.00 ns, 313.3000 us/op
+WorkloadJitting  1: 1 op, 506600.00 ns, 506.6000 us/op
+
+OverheadWarmup   1: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadWarmup   2: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   3: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   4: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   5: 1000 op, 27200.00 ns, 27.2000 ns/op
+OverheadWarmup   6: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadWarmup   7: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadWarmup   8: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+OverheadActual   1: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   2: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual   3: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual   4: 1000 op, 4900.00 ns, 4.9000 ns/op
+OverheadActual   5: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   6: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   7: 1000 op, 2500.00 ns, 2.5000 ns/op
+OverheadActual   8: 1000 op, 3000.00 ns, 3.0000 ns/op
+OverheadActual   9: 1000 op, 2400.00 ns, 2.4000 ns/op
+OverheadActual  10: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  11: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  12: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  13: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  14: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  15: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  16: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  17: 1000 op, 2300.00 ns, 2.3000 ns/op
+OverheadActual  18: 1000 op, 2200.00 ns, 2.2000 ns/op
+OverheadActual  19: 1000 op, 2200.00 ns, 2.2000 ns/op
+
+WorkloadWarmup   1: 1000 op, 64928600.00 ns, 64.9286 us/op
+WorkloadWarmup   2: 1000 op, 66812200.00 ns, 66.8122 us/op
+WorkloadWarmup   3: 1000 op, 53428300.00 ns, 53.4283 us/op
+WorkloadWarmup   4: 1000 op, 55507500.00 ns, 55.5075 us/op
+WorkloadWarmup   5: 1000 op, 52225200.00 ns, 52.2252 us/op
+WorkloadWarmup   6: 1000 op, 52799000.00 ns, 52.7990 us/op
+WorkloadWarmup   7: 1000 op, 55617000.00 ns, 55.6170 us/op
+WorkloadWarmup   8: 1000 op, 53694200.00 ns, 53.6942 us/op
+WorkloadWarmup   9: 1000 op, 57452000.00 ns, 57.4520 us/op
+WorkloadWarmup  10: 1000 op, 53371900.00 ns, 53.3719 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 50342500.00 ns, 50.3425 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1000 op, 50340200.00 ns, 50.3402 us/op
+
+// AfterAll
+// Benchmark Process 31604 has exited with code 0.
+
+Mean = 50.340 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 50.340 μs, Q1 = 50.340 μs, Median = 50.340 μs, Q3 = 50.340 μs, Max = 50.340 μs
+IQR = 0.000 μs, LowerFence = 50.340 μs, UpperFence = 50.340 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2023-01-21 17:54 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.ArrayVsList-report.csv
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.ArrayVsList-report-github.md
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.ArrayVsList-report.html
+
+// * Detailed results *
+ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 37.545 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 37.545 μs, Q1 = 37.545 μs, Median = 37.545 μs, Q3 = 37.545 μs, Max = 37.545 μs
+IQR = 0.000 μs, LowerFence = 37.545 μs, UpperFence = 37.545 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[37.545 μs ; 37.546 μs) | @
+---------------------------------------------------
+
+ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 9.024 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 9.024 μs, Q1 = 9.024 μs, Median = 9.024 μs, Q3 = 9.024 μs, Max = 9.024 μs
+IQR = 0.000 μs, LowerFence = 9.024 μs, UpperFence = 9.024 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[9.024 μs ; 9.025 μs) | @
+---------------------------------------------------
+
+ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.650 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 1.650 ns, Q1 = 1.650 ns, Median = 1.650 ns, Q3 = 1.650 ns, Max = 1.650 ns
+IQR = 0.000 ns, LowerFence = 1.650 ns, UpperFence = 1.650 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.150 ns ; 2.150 ns) | @
+---------------------------------------------------
+
+ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=1000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 2.390 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.390 μs, Q1 = 2.390 μs, Median = 2.390 μs, Q3 = 2.390 μs, Max = 2.390 μs
+IQR = 0.000 μs, LowerFence = 2.390 μs, UpperFence = 2.390 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.390 μs ; 2.391 μs) | @
+---------------------------------------------------
+
+ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 186.810 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 186.810 μs, Q1 = 186.810 μs, Median = 186.810 μs, Q3 = 186.810 μs, Max = 186.810 μs
+IQR = 0.000 μs, LowerFence = 186.810 μs, UpperFence = 186.810 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[186.809 μs ; 186.810 μs) | @
+---------------------------------------------------
+
+ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 50.899 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 50.899 μs, Q1 = 50.899 μs, Median = 50.899 μs, Q3 = 50.899 μs, Max = 50.899 μs
+IQR = 0.000 μs, LowerFence = 50.899 μs, UpperFence = 50.899 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[50.899 μs ; 50.900 μs) | @
+---------------------------------------------------
+
+ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 366.500 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 366.500 ns, Q1 = 366.500 ns, Median = 366.500 ns, Q3 = 366.500 ns, Max = 366.500 ns
+IQR = 0.000 ns, LowerFence = 366.500 ns, UpperFence = 366.500 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[366.000 ns ; 367.000 ns) | @
+---------------------------------------------------
+
+ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=10000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 7.341 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 7.341 μs, Q1 = 7.341 μs, Median = 7.341 μs, Q3 = 7.341 μs, Max = 7.341 μs
+IQR = 0.000 μs, LowerFence = 7.341 μs, UpperFence = 7.341 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[7.340 μs ; 7.341 μs) | @
+---------------------------------------------------
+
+ArrayVsList.AArrayAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.435 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 1.435 ms, Q1 = 1.435 ms, Median = 1.435 ms, Q3 = 1.435 ms, Max = 1.435 ms
+IQR = 0.000 ms, LowerFence = 1.435 ms, UpperFence = 1.435 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.435 ms ; 1.435 ms) | @
+---------------------------------------------------
+
+ArrayVsList.BListAdd: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 425.104 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 425.104 μs, Q1 = 425.104 μs, Median = 425.104 μs, Q3 = 425.104 μs, Max = 425.104 μs
+IQR = 0.000 μs, LowerFence = 425.104 μs, UpperFence = 425.104 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[425.103 μs ; 425.104 μs) | @
+---------------------------------------------------
+
+ArrayVsList.CListFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 2.200 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 2.200 ns, Q1 = 2.200 ns, Median = 2.200 ns, Q3 = 2.200 ns, Max = 2.200 ns
+IQR = 0.000 ns, LowerFence = 2.200 ns, UpperFence = 2.200 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.700 ns ; 2.700 ns) | @
+---------------------------------------------------
+
+ArrayVsList.DArrayFor: Job-QKIYXC(InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10) [n=100000]
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 50.340 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 50.340 μs, Q1 = 50.340 μs, Median = 50.340 μs, Q3 = 50.340 μs, Max = 50.340 μs
+IQR = 0.000 μs, LowerFence = 50.340 μs, UpperFence = 50.340 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[50.340 μs ; 50.341 μs) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.4, OS=Windows 10 (10.0.19044.2364/21H2/November2021Update)
+Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+  Job-QKIYXC : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+
+InvocationCount=1000  IterationCount=1  LaunchCount=1  
+UnrollFactor=1  WarmupCount=10  
+
+|    Method |      n |             Mean | Error |
+|---------- |------- |-----------------:|------:|
+| AArrayAdd |   1000 |    37,545.250 ns |    NA |
+|  BListAdd |   1000 |     9,024.500 ns |    NA |
+|  CListFor |   1000 |         1.650 ns |    NA |
+| DArrayFor |   1000 |     2,390.100 ns |    NA |
+| AArrayAdd |  10000 |   186,809.700 ns |    NA |
+|  BListAdd |  10000 |    50,899.400 ns |    NA |
+|  CListFor |  10000 |       366.500 ns |    NA |
+| DArrayFor |  10000 |     7,341.000 ns |    NA |
+| AArrayAdd | 100000 | 1,434,809.700 ns |    NA |
+|  BListAdd | 100000 |   425,103.900 ns |    NA |
+|  CListFor | 100000 |         2.200 ns |    NA |
+| DArrayFor | 100000 |    50,340.200 ns |    NA |
+
+// * Warnings *
+MinIterationTime
+  ArrayVsList.AArrayAdd: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 37.5477 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.BListAdd: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10  -> The minimum observed iteration time is 9.0267 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.CListFor: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10  -> The minimum observed iteration time is 4.1000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.DArrayFor: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 2.3923 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.BListAdd: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10  -> The minimum observed iteration time is 50.9017 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.CListFor: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10  -> The minimum observed iteration time is 368.7000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.DArrayFor: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 7.3433 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.CListFor: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10  -> The minimum observed iteration time is 4.4000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.DArrayFor: InvocationCount=1000, IterationCount=1, LaunchCount=1, UnrollFactor=1, WarmupCount=10 -> The minimum observed iteration time is 50.3425 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+
+// * Legends *
+  n     : Value of the 'n' parameter
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  1 ns  : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:29 (29.65 sec), executed benchmarks: 12
+
+Global total time: 00:00:36 (36.93 sec), executed benchmarks: 12
+// * Artifacts cleanup *

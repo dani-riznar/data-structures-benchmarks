@@ -1,0 +1,266 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553
+// command took 2.15s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553
+// command took 16.1s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553
+// command took 4.7s and exited with 0
+// ***** Done, took 00:00:23 (23.5 sec)   *****
+// Found 3 benchmarks:
+//   ArrayVsList.ArrayZeroSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+//   ArrayVsList.ArrayFullSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+//   ArrayVsList.ListFullSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.ArrayZeroSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet cadac4a7-3e44-4c1d-9007-d75e46d14553.dll --anonymousPipes 1464 1320 --benchmarkName MyBenchmarks.ArrayVsList.ArrayZeroSize --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-VENJXH(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 14969400.00 ns, 2.9939 ms/op
+WorkloadActual   2: 5 op, 13492000.00 ns, 2.6984 ms/op
+WorkloadActual   3: 5 op, 7675700.00 ns, 1.5351 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 14969400.00 ns, 2.9939 ms/op
+WorkloadResult   2: 5 op, 13492000.00 ns, 2.6984 ms/op
+WorkloadResult   3: 5 op, 7675700.00 ns, 1.5351 ms/op
+
+// AfterAll
+// Benchmark Process 33548 has exited with code 0.
+// Launch: 2 / 2
+// Execute: dotnet cadac4a7-3e44-4c1d-9007-d75e46d14553.dll --anonymousPipes 1188 1432 --benchmarkName MyBenchmarks.ArrayVsList.ArrayZeroSize --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-IGRNZW(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 17626700.00 ns, 3.5253 ms/op
+WorkloadActual   2: 5 op, 10408100.00 ns, 2.0816 ms/op
+WorkloadActual   3: 5 op, 11467300.00 ns, 2.2935 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 17626700.00 ns, 3.5253 ms/op
+WorkloadResult   2: 5 op, 10408100.00 ns, 2.0816 ms/op
+WorkloadResult   3: 5 op, 11467300.00 ns, 2.2935 ms/op
+
+// AfterAll
+// Benchmark Process 34284 has exited with code 0.
+
+Mean = 2.521 ms, StdErr = 0.288 ms (11.40%), N = 6, StdDev = 0.704 ms
+Min = 1.535 ms, Q1 = 2.135 ms, Median = 2.496 ms, Q3 = 2.920 ms, Max = 3.525 ms
+IQR = 0.785 ms, LowerFence = 0.956 ms, UpperFence = 4.098 ms
+ConfidenceInterval = [0.546 ms; 4.496 ms] (CI 99.9%), Margin = 1.975 ms (78.34% of Mean)
+Skewness = 0.03, Kurtosis = 1.39, MValue = 2
+
+// ** Remained 2 (66.7%) benchmark(s) to run. Estimated finish 2023-01-15 20:19 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.ArrayFullSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet cadac4a7-3e44-4c1d-9007-d75e46d14553.dll --anonymousPipes 1464 1452 --benchmarkName MyBenchmarks.ArrayVsList.ArrayFullSize --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-PLRGQK(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 783300.00 ns, 156.6600 us/op
+WorkloadActual   2: 5 op, 1151300.00 ns, 230.2600 us/op
+WorkloadActual   3: 5 op, 95900.00 ns, 19.1800 us/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 783300.00 ns, 156.6600 us/op
+WorkloadResult   2: 5 op, 1151300.00 ns, 230.2600 us/op
+WorkloadResult   3: 5 op, 95900.00 ns, 19.1800 us/op
+
+// AfterAll
+// Benchmark Process 33456 has exited with code 0.
+// Launch: 2 / 2
+// Execute: dotnet cadac4a7-3e44-4c1d-9007-d75e46d14553.dll --anonymousPipes 1312 1500 --benchmarkName MyBenchmarks.ArrayVsList.ArrayFullSize --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-CXMRHY(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 450700.00 ns, 90.1400 us/op
+WorkloadActual   2: 5 op, 861100.00 ns, 172.2200 us/op
+WorkloadActual   3: 5 op, 62400.00 ns, 12.4800 us/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 450700.00 ns, 90.1400 us/op
+WorkloadResult   2: 5 op, 861100.00 ns, 172.2200 us/op
+WorkloadResult   3: 5 op, 62400.00 ns, 12.4800 us/op
+
+// AfterAll
+// Benchmark Process 34428 has exited with code 0.
+
+Mean = 113.490 μs, StdErr = 35.866 μs (31.60%), N = 6, StdDev = 87.853 μs
+Min = 12.480 μs, Q1 = 36.920 μs, Median = 123.400 μs, Q3 = 168.330 μs, Max = 230.260 μs
+IQR = 131.410 μs, LowerFence = -160.195 μs, UpperFence = 365.445 μs
+ConfidenceInterval = [-132.866 μs; 359.846 μs] (CI 99.9%), Margin = 246.356 μs (217.07% of Mean)
+Skewness = -0, Kurtosis = 1.08, MValue = 2
+
+// ** Remained 1 (33.3%) benchmark(s) to run. Estimated finish 2023-01-15 20:19 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ArrayVsList.ListFullSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet cadac4a7-3e44-4c1d-9007-d75e46d14553.dll --anonymousPipes 1572 1460 --benchmarkName MyBenchmarks.ArrayVsList.ListFullSize --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 2 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-LYIKBO(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 829600.00 ns, 165.9200 us/op
+WorkloadActual   2: 5 op, 901200.00 ns, 180.2400 us/op
+WorkloadActual   3: 5 op, 103000.00 ns, 20.6000 us/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 829600.00 ns, 165.9200 us/op
+WorkloadResult   2: 5 op, 901200.00 ns, 180.2400 us/op
+WorkloadResult   3: 5 op, 103000.00 ns, 20.6000 us/op
+
+// AfterAll
+// Benchmark Process 23448 has exited with code 0.
+// Launch: 2 / 2
+// Execute: dotnet cadac4a7-3e44-4c1d-9007-d75e46d14553.dll --anonymousPipes 1588 1500 --benchmarkName MyBenchmarks.ArrayVsList.ListFullSize --job "InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 2 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\cadac4a7-3e44-4c1d-9007-d75e46d14553\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-FDYFQK(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 332300.00 ns, 66.4600 us/op
+WorkloadActual   2: 5 op, 488100.00 ns, 97.6200 us/op
+WorkloadActual   3: 5 op, 60800.00 ns, 12.1600 us/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 332300.00 ns, 66.4600 us/op
+WorkloadResult   2: 5 op, 488100.00 ns, 97.6200 us/op
+WorkloadResult   3: 5 op, 60800.00 ns, 12.1600 us/op
+
+// AfterAll
+// Benchmark Process 31012 has exited with code 0.
+
+Mean = 90.500 μs, StdErr = 29.094 μs (32.15%), N = 6, StdDev = 71.265 μs
+Min = 12.160 μs, Q1 = 32.065 μs, Median = 82.040 μs, Q3 = 148.845 μs, Max = 180.240 μs
+IQR = 116.780 μs, LowerFence = -143.105 μs, UpperFence = 324.015 μs
+ConfidenceInterval = [-109.339 μs; 290.339 μs] (CI 99.9%), Margin = 199.839 μs (220.82% of Mean)
+Skewness = 0.15, Kurtosis = 1.03, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2023-01-15 20:19 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.ArrayVsList-report.csv
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.ArrayVsList-report-github.md
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.ArrayVsList-report.html
+
+// * Detailed results *
+ArrayVsList.ArrayZeroSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 2.521 ms, StdErr = 0.288 ms (11.40%), N = 6, StdDev = 0.704 ms
+Min = 1.535 ms, Q1 = 2.135 ms, Median = 2.496 ms, Q3 = 2.920 ms, Max = 3.525 ms
+IQR = 0.785 ms, LowerFence = 0.956 ms, UpperFence = 4.098 ms
+ConfidenceInterval = [0.546 ms; 4.496 ms] (CI 99.9%), Margin = 1.975 ms (78.34% of Mean)
+Skewness = 0.03, Kurtosis = 1.39, MValue = 2
+-------------------- Histogram --------------------
+[1.026 ms ; 2.029 ms) | @
+[2.029 ms ; 3.046 ms) | @@@@
+[3.046 ms ; 4.034 ms) | @
+---------------------------------------------------
+
+ArrayVsList.ArrayFullSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 113.490 μs, StdErr = 35.866 μs (31.60%), N = 6, StdDev = 87.853 μs
+Min = 12.480 μs, Q1 = 36.920 μs, Median = 123.400 μs, Q3 = 168.330 μs, Max = 230.260 μs
+IQR = 131.410 μs, LowerFence = -160.195 μs, UpperFence = 365.445 μs
+ConfidenceInterval = [-132.866 μs; 359.846 μs] (CI 99.9%), Margin = 246.356 μs (217.07% of Mean)
+Skewness = -0, Kurtosis = 1.08, MValue = 2
+-------------------- Histogram --------------------
+[-12.146 μs ; 130.004 μs) | @@@
+[130.004 μs ; 256.916 μs) | @@@
+---------------------------------------------------
+
+ArrayVsList.ListFullSize: Job-UKDICQ(InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 90.500 μs, StdErr = 29.094 μs (32.15%), N = 6, StdDev = 71.265 μs
+Min = 12.160 μs, Q1 = 32.065 μs, Median = 82.040 μs, Q3 = 148.845 μs, Max = 180.240 μs
+IQR = 116.780 μs, LowerFence = -143.105 μs, UpperFence = 324.015 μs
+ConfidenceInterval = [-109.339 μs; 290.339 μs] (CI 99.9%), Margin = 199.839 μs (220.82% of Mean)
+Skewness = 0.15, Kurtosis = 1.03, MValue = 2
+-------------------- Histogram --------------------
+[  3.416 μs ; 121.606 μs) | @@@@
+[121.606 μs ; 231.714 μs) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.4, OS=Windows 10 (10.0.19044.2364/21H2/November2021Update)
+Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2 [AttachedDebugger]
+  Job-UKDICQ : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+
+InvocationCount=5  IterationCount=3  LaunchCount=2  
+RunStrategy=ColdStart  UnrollFactor=1  
+
+|        Method |        Mean |       Error |    StdDev |
+|-------------- |------------:|------------:|----------:|
+| ArrayZeroSize | 2,521.31 μs | 1,975.12 μs | 704.35 μs |
+| ArrayFullSize |   113.49 μs |   246.36 μs |  87.85 μs |
+|  ListFullSize |    90.50 μs |   199.84 μs |  71.26 μs |
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+MinIterationTime
+  ArrayVsList.ArrayZeroSize: InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1 -> The minimum observed iteration time is 7.6757 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.ArrayFullSize: InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1 -> The minimum observed iteration time is 62.4000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  ArrayVsList.ListFullSize: InvocationCount=5, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1  -> The minimum observed iteration time is 60.8000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 μs   : 1 Microsecond (0.000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:04 (4.57 sec), executed benchmarks: 3
+
+Global total time: 00:00:29 (29.74 sec), executed benchmarks: 3
+// * Artifacts cleanup *

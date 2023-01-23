@@ -1,0 +1,164 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 4 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\39a5e652-29a8-4141-bdce-f7da8693c096
+// command took 2.53s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\39a5e652-29a8-4141-bdce-f7da8693c096
+// command took 17.47s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\39a5e652-29a8-4141-bdce-f7da8693c096
+// command took 5.61s and exited with 0
+// ***** Done, took 00:00:26 (26.21 sec)   *****
+// Found 4 benchmarks:
+//   ListVsQueue.ListAdd: Job-RRVJKF(InvocationCount=40, UnrollFactor=1)
+//   ListVsQueue.QueueAdd: Job-RRVJKF(InvocationCount=40, UnrollFactor=1)
+//   ListVsQueue.ListRemove: Job-RRVJKF(InvocationCount=40, UnrollFactor=1)
+//   ListVsQueue.QueueRemove: Job-RRVJKF(InvocationCount=40, UnrollFactor=1)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ListVsQueue.ListAdd: Job-RRVJKF(InvocationCount=40, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 39a5e652-29a8-4141-bdce-f7da8693c096.dll --anonymousPipes 1688 1960 --benchmarkName MyBenchmarks.ListVsQueue.ListAdd --job "InvocationCount=40, UnrollFactor=1" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\39a5e652-29a8-4141-bdce-f7da8693c096\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-BNVVKL(InvocationCount=40, UnrollFactor=1)
+
+OverheadJitting  1: 1 op, 441300.00 ns, 441.3000 us/op
+WorkloadJitting  1: 1 op, 102076800.00 ns, 102.0768 ms/op
+
+OverheadWarmup   1: 40 op, 700.00 ns, 17.5000 ns/op
+OverheadWarmup   2: 40 op, 700.00 ns, 17.5000 ns/op
+OverheadWarmup   3: 40 op, 700.00 ns, 17.5000 ns/op
+OverheadWarmup   4: 40 op, 1300.00 ns, 32.5000 ns/op
+OverheadWarmup   5: 40 op, 1300.00 ns, 32.5000 ns/op
+
+OverheadActual   1: 40 op, 900.00 ns, 22.5000 ns/op
+OverheadActual   2: 40 op, 900.00 ns, 22.5000 ns/op
+OverheadActual   3: 40 op, 600.00 ns, 15.0000 ns/op
+OverheadActual   4: 40 op, 1300.00 ns, 32.5000 ns/op
+OverheadActual   5: 40 op, 500.00 ns, 12.5000 ns/op
+OverheadActual   6: 40 op, 500.00 ns, 12.5000 ns/op
+OverheadActual   7: 40 op, 600.00 ns, 15.0000 ns/op
+OverheadActual   8: 40 op, 800.00 ns, 20.0000 ns/op
+OverheadActual   9: 40 op, 900.00 ns, 22.5000 ns/op
+OverheadActual  10: 40 op, 600.00 ns, 15.0000 ns/op
+OverheadActual  11: 40 op, 600.00 ns, 15.0000 ns/op
+OverheadActual  12: 40 op, 600.00 ns, 15.0000 ns/op
+OverheadActual  13: 40 op, 500.00 ns, 12.5000 ns/op
+OverheadActual  14: 40 op, 800.00 ns, 20.0000 ns/op
+OverheadActual  15: 40 op, 1100.00 ns, 27.5000 ns/op
+OverheadActual  16: 40 op, 800.00 ns, 20.0000 ns/op
+OverheadActual  17: 40 op, 1400.00 ns, 35.0000 ns/op
+OverheadActual  18: 40 op, 3300.00 ns, 82.5000 ns/op
+OverheadActual  19: 40 op, 4900.00 ns, 122.5000 ns/op
+OverheadActual  20: 40 op, 1300.00 ns, 32.5000 ns/op
+
+WorkloadWarmup   1: 40 op, 4065591900.00 ns, 101.6398 ms/op
+WorkloadWarmup   2: 40 op, 4049217400.00 ns, 101.2304 ms/op
+WorkloadWarmup   3: 40 op, 4053720500.00 ns, 101.3430 ms/op
+WorkloadWarmup   4: 40 op, 4044995800.00 ns, 101.1249 ms/op
+WorkloadWarmup   5: 40 op, 4049873700.00 ns, 101.2468 ms/op
+WorkloadWarmup   6: 40 op, 4048945700.00 ns, 101.2236 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 40 op, 4052302700.00 ns, 101.3076 ms/op
+WorkloadActual   2: 40 op, 4056604700.00 ns, 101.4151 ms/op
+WorkloadActual   3: 40 op, 4045632500.00 ns, 101.1408 ms/op
+WorkloadActual   4: 40 op, 4047542400.00 ns, 101.1886 ms/op
+WorkloadActual   5: 40 op, 4047840600.00 ns, 101.1960 ms/op
+WorkloadActual   6: 40 op, 4055402800.00 ns, 101.3851 ms/op
+WorkloadActual   7: 40 op, 4057325200.00 ns, 101.4331 ms/op
+WorkloadActual   8: 40 op, 4055835800.00 ns, 101.3959 ms/op
+WorkloadActual   9: 40 op, 4057077600.00 ns, 101.4269 ms/op
+WorkloadActual  10: 40 op, 4048765200.00 ns, 101.2191 ms/op
+WorkloadActual  11: 40 op, 4048021400.00 ns, 101.2005 ms/op
+WorkloadActual  12: 40 op, 4047136300.00 ns, 101.1784 ms/op
+WorkloadActual  13: 40 op, 4051821800.00 ns, 101.2955 ms/op
+WorkloadActual  14: 40 op, 4057368400.00 ns, 101.4342 ms/op
+WorkloadActual  15: 40 op, 4055511400.00 ns, 101.3878 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 40 op, 4052301900.00 ns, 101.3075 ms/op
+WorkloadResult   2: 40 op, 4056603900.00 ns, 101.4151 ms/op
+WorkloadResult   3: 40 op, 4045631700.00 ns, 101.1408 ms/op
+WorkloadResult   4: 40 op, 4047541600.00 ns, 101.1885 ms/op
+WorkloadResult   5: 40 op, 4047839800.00 ns, 101.1960 ms/op
+WorkloadResult   6: 40 op, 4055402000.00 ns, 101.3851 ms/op
+WorkloadResult   7: 40 op, 4057324400.00 ns, 101.4331 ms/op
+WorkloadResult   8: 40 op, 4055835000.00 ns, 101.3959 ms/op
+WorkloadResult   9: 40 op, 4057076800.00 ns, 101.4269 ms/op
+WorkloadResult  10: 40 op, 4048764400.00 ns, 101.2191 ms/op
+WorkloadResult  11: 40 op, 4048020600.00 ns, 101.2005 ms/op
+WorkloadResult  12: 40 op, 4047135500.00 ns, 101.1784 ms/op
+WorkloadResult  13: 40 op, 4051821000.00 ns, 101.2955 ms/op
+WorkloadResult  14: 40 op, 4057367600.00 ns, 101.4342 ms/op
+WorkloadResult  15: 40 op, 4055510600.00 ns, 101.3878 ms/op
+
+// AfterAll
+// Benchmark Process 21032 has exited with code 0.
+
+Mean = 101.307 ms, StdErr = 0.028 ms (0.03%), N = 15, StdDev = 0.110 ms
+Min = 101.141 ms, Q1 = 101.198 ms, Median = 101.308 ms, Q3 = 101.405 ms, Max = 101.434 ms
+IQR = 0.207 ms, LowerFence = 100.887 ms, UpperFence = 101.716 ms
+ConfidenceInterval = [101.190 ms; 101.424 ms] (CI 99.9%), Margin = 0.117 ms (0.12% of Mean)
+Skewness = -0.14, Kurtosis = 1.19, MValue = 2
+
+// ** Remained 3 (75.0%) benchmark(s) to run. Estimated finish 2023-01-18 23:03 (0h 4m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ListVsQueue.QueueAdd: Job-RRVJKF(InvocationCount=40, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 39a5e652-29a8-4141-bdce-f7da8693c096.dll --anonymousPipes 2040 1692 --benchmarkName MyBenchmarks.ListVsQueue.QueueAdd --job "InvocationCount=40, UnrollFactor=1" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\39a5e652-29a8-4141-bdce-f7da8693c096\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-XDIOUI(InvocationCount=40, UnrollFactor=1)
+
+OverheadJitting  1: 1 op, 254900.00 ns, 254.9000 us/op
+WorkloadJitting  1: 1 op, 101857800.00 ns, 101.8578 ms/op
+
+OverheadWarmup   1: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadWarmup   2: 40 op, 300.00 ns, 7.5000 ns/op
+OverheadWarmup   3: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadWarmup   4: 40 op, 300.00 ns, 7.5000 ns/op
+OverheadWarmup   5: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadWarmup   6: 40 op, 400.00 ns, 10.0000 ns/op
+
+OverheadActual   1: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual   2: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual   3: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual   4: 40 op, 1000.00 ns, 25.0000 ns/op
+OverheadActual   5: 40 op, 500.00 ns, 12.5000 ns/op
+OverheadActual   6: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual   7: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual   8: 40 op, 300.00 ns, 7.5000 ns/op
+OverheadActual   9: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual  10: 40 op, 500.00 ns, 12.5000 ns/op
+OverheadActual  11: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual  12: 40 op, 2600.00 ns, 65.0000 ns/op
+OverheadActual  13: 40 op, 300.00 ns, 7.5000 ns/op
+OverheadActual  14: 40 op, 300.00 ns, 7.5000 ns/op
+OverheadActual  15: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual  16: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual  17: 40 op, 500.00 ns, 12.5000 ns/op
+OverheadActual  18: 40 op, 500.00 ns, 12.5000 ns/op
+OverheadActual  19: 40 op, 400.00 ns, 10.0000 ns/op
+OverheadActual  20: 40 op, 400.00 ns, 10.0000 ns/op
+
+WorkloadWarmup   1: 40 op, 4052756900.00 ns, 101.3189 ms/op
+WorkloadWarmup   2: 40 op, 4054449500.00 ns, 101.3612 ms/op
+WorkloadWarmup   3: 40 op, 4048335300.00 ns, 101.2084 ms/op
+WorkloadWarmup   4: 40 op, 4045612300.00 ns, 101.1403 ms/op
+WorkloadWarmup   5: 40 op, 4048644700.00 ns, 101.2161 ms/op
+WorkloadWarmup   6: 40 op, 4054546800.00 ns, 101.3637 ms/op
+WorkloadWarmup   7: 40 op, 4052370500.00 ns, 101.3093 ms/op

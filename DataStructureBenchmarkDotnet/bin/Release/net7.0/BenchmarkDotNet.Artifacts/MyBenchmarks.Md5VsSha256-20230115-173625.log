@@ -1,0 +1,198 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\43955447-2fe8-4148-bcdd-06e824152f07
+// command took 4.32s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\43955447-2fe8-4148-bcdd-06e824152f07
+// command took 19.18s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\43955447-2fe8-4148-bcdd-06e824152f07
+// command took 8.45s and exited with 0
+// ***** Done, took 00:00:32 (32.79 sec)   *****
+// Found 2 benchmarks:
+//   Md5VsSha256.Sha256: Job-JYFAEB(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+//   Md5VsSha256.Md5: Job-JYFAEB(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: Md5VsSha256.Sha256: Job-JYFAEB(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet 43955447-2fe8-4148-bcdd-06e824152f07.dll --anonymousPipes 1572 1580 --benchmarkName MyBenchmarks.Md5VsSha256.Sha256 --job "InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\43955447-2fe8-4148-bcdd-06e824152f07\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-GDKENG(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 7419400.00 ns, 741.9400 us/op
+WorkloadActual   2: 10 op, 1506600.00 ns, 150.6600 us/op
+WorkloadActual   3: 10 op, 716400.00 ns, 71.6400 us/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 7419400.00 ns, 741.9400 us/op
+WorkloadResult   2: 10 op, 1506600.00 ns, 150.6600 us/op
+WorkloadResult   3: 10 op, 716400.00 ns, 71.6400 us/op
+
+// AfterAll
+// Benchmark Process 32816 has exited with code 0.
+// Launch: 2 / 2
+// Execute: dotnet 43955447-2fe8-4148-bcdd-06e824152f07.dll --anonymousPipes 1652 1620 --benchmarkName MyBenchmarks.Md5VsSha256.Sha256 --job "InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 0 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\43955447-2fe8-4148-bcdd-06e824152f07\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-NOFVHR(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 11113500.00 ns, 1.1114 ms/op
+WorkloadActual   2: 10 op, 656600.00 ns, 65.6600 us/op
+WorkloadActual   3: 10 op, 510600.00 ns, 51.0600 us/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 11113500.00 ns, 1.1114 ms/op
+WorkloadResult   2: 10 op, 656600.00 ns, 65.6600 us/op
+WorkloadResult   3: 10 op, 510600.00 ns, 51.0600 us/op
+
+// AfterAll
+// Benchmark Process 31964 has exited with code 0.
+
+Mean = 365.385 μs, StdErr = 184.326 μs (50.45%), N = 6, StdDev = 451.505 μs
+Min = 51.060 μs, Q1 = 67.155 μs, Median = 111.150 μs, Q3 = 594.120 μs, Max = 1,111.350 μs
+IQR = 526.965 μs, LowerFence = -723.293 μs, UpperFence = 1,384.568 μs
+ConfidenceInterval = [-900.720 μs; 1,631.490 μs] (CI 99.9%), Margin = 1,266.105 μs (346.51% of Mean)
+Skewness = 0.68, Kurtosis = 1.43, MValue = 2
+
+// ** Remained 1 (50.0%) benchmark(s) to run. Estimated finish 2023-01-15 17:37 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: Md5VsSha256.Md5: Job-JYFAEB(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet 43955447-2fe8-4148-bcdd-06e824152f07.dll --anonymousPipes 1568 1576 --benchmarkName MyBenchmarks.Md5VsSha256.Md5 --job "InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\43955447-2fe8-4148-bcdd-06e824152f07\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-JTAIYO(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 10695000.00 ns, 1.0695 ms/op
+WorkloadActual   2: 10 op, 609100.00 ns, 60.9100 us/op
+WorkloadActual   3: 10 op, 274400.00 ns, 27.4400 us/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 10695000.00 ns, 1.0695 ms/op
+WorkloadResult   2: 10 op, 609100.00 ns, 60.9100 us/op
+WorkloadResult   3: 10 op, 274400.00 ns, 27.4400 us/op
+
+// AfterAll
+// Benchmark Process 23236 has exited with code 0.
+// Launch: 2 / 2
+// Execute: dotnet 43955447-2fe8-4148-bcdd-06e824152f07.dll --anonymousPipes 1740 1736 --benchmarkName MyBenchmarks.Md5VsSha256.Md5 --job "InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1" --benchmarkId 1 in C:\Users\danielri\source\repos\DataStructureBenchmarkDotnet\DataStructureBenchmarkDotnet\bin\Release\net7.0\43955447-2fe8-4148-bcdd-06e824152f07\bin\Release\net7.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-WIJQOX(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 8073700.00 ns, 807.3700 us/op
+WorkloadActual   2: 10 op, 402500.00 ns, 40.2500 us/op
+WorkloadActual   3: 10 op, 383400.00 ns, 38.3400 us/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 8073700.00 ns, 807.3700 us/op
+WorkloadResult   2: 10 op, 402500.00 ns, 40.2500 us/op
+WorkloadResult   3: 10 op, 383400.00 ns, 38.3400 us/op
+
+// AfterAll
+// Benchmark Process 8244 has exited with code 0.
+
+Mean = 340.635 μs, StdErr = 192.097 μs (56.39%), N = 6, StdDev = 470.539 μs
+Min = 27.440 μs, Q1 = 38.818 μs, Median = 50.580 μs, Q3 = 620.755 μs, Max = 1,069.500 μs
+IQR = 581.938 μs, LowerFence = -834.089 μs, UpperFence = 1,493.661 μs
+ConfidenceInterval = [-978.845 μs; 1,660.115 μs] (CI 99.9%), Margin = 1,319.480 μs (387.36% of Mean)
+Skewness = 0.61, Kurtosis = 1.23, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2023-01-15 17:37 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.Md5VsSha256-report.csv
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.Md5VsSha256-report-github.md
+  BenchmarkDotNet.Artifacts\results\MyBenchmarks.Md5VsSha256-report.html
+
+// * Detailed results *
+Md5VsSha256.Sha256: Job-JYFAEB(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 365.385 μs, StdErr = 184.326 μs (50.45%), N = 6, StdDev = 451.505 μs
+Min = 51.060 μs, Q1 = 67.155 μs, Median = 111.150 μs, Q3 = 594.120 μs, Max = 1,111.350 μs
+IQR = 526.965 μs, LowerFence = -723.293 μs, UpperFence = 1,384.568 μs
+ConfidenceInterval = [-900.720 μs; 1,631.490 μs] (CI 99.9%), Margin = 1,266.105 μs (346.51% of Mean)
+Skewness = 0.68, Kurtosis = 1.43, MValue = 2
+-------------------- Histogram --------------------
+[-275.061 μs ;   426.981 μs) | @@@@
+[ 426.981 μs ; 1,252.766 μs) | @@
+---------------------------------------------------
+
+Md5VsSha256.Md5: Job-JYFAEB(InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 340.635 μs, StdErr = 192.097 μs (56.39%), N = 6, StdDev = 470.539 μs
+Min = 27.440 μs, Q1 = 38.818 μs, Median = 50.580 μs, Q3 = 620.755 μs, Max = 1,069.500 μs
+IQR = 581.938 μs, LowerFence = -834.089 μs, UpperFence = 1,493.661 μs
+ConfidenceInterval = [-978.845 μs; 1,660.115 μs] (CI 99.9%), Margin = 1,319.480 μs (387.36% of Mean)
+Skewness = 0.61, Kurtosis = 1.23, MValue = 2
+-------------------- Histogram --------------------
+[-312.429 μs ;   598.566 μs) | @@@@
+[ 598.566 μs ; 1,409.369 μs) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.4, OS=Windows 10 (10.0.19044.2364/21H2/November2021Update)
+Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2 [AttachedDebugger]
+  Job-JYFAEB : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+
+InvocationCount=10  IterationCount=3  LaunchCount=2  
+RunStrategy=ColdStart  UnrollFactor=1  
+
+| Method |     Mean |      Error |   StdDev |    Median |
+|------- |---------:|-----------:|---------:|----------:|
+| Sha256 | 365.4 μs | 1,266.1 μs | 451.5 μs | 111.15 μs |
+|    Md5 | 340.6 μs | 1,319.5 μs | 470.5 μs |  50.58 μs |
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+MinIterationTime
+  Md5VsSha256.Sha256: InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1 -> The minimum observed iteration time is 510.6000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  Md5VsSha256.Md5: InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1    -> The minimum observed iteration time is 274.4000 μs which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+ZeroMeasurement
+  Md5VsSha256.Sha256: InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1 -> The method duration is indistinguishable from the empty method duration
+  Md5VsSha256.Md5: InvocationCount=10, IterationCount=3, LaunchCount=2, RunStrategy=ColdStart, UnrollFactor=1    -> The method duration is indistinguishable from the empty method duration
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 μs   : 1 Microsecond (0.000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:06 (6.5 sec), executed benchmarks: 2
+
+Global total time: 00:00:43 (43.4 sec), executed benchmarks: 2
+// * Artifacts cleanup *

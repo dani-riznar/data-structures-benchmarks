@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>MyBenchmarks.ListVsLinkedList-20230121-172231</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.4, OS=Windows 10 (10.0.19044.2364/21H2/November2021Update)
+Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+  Job-VXZFZY : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>InvocationCount=1000  IterationCount=1  LaunchCount=1  
+UnrollFactor=1  WarmupCount=10  
+</code></pre>
+
+<table>
+<thead><tr><th>      Method</th><th>n</th><th>  Mean</th><th>Error</th>
+</tr>
+</thead><tbody><tr><td>ListPrepend</td><td>1000</td><td>121.45 ns</td><td>NA</td>
+</tr><tr><td>LinkedListPrepend</td><td>1000</td><td>22.20 ns</td><td>NA</td>
+</tr><tr><td>ListInsert</td><td>1000</td><td>70.80 ns</td><td>NA</td>
+</tr><tr><td>LinkedListInsert</td><td>1000</td><td>60.50 ns</td><td>NA</td>
+</tr><tr><td>ListRemoveAt</td><td>1000</td><td>36.60 ns</td><td>NA</td>
+</tr><tr><td>LinkedListRemoveAt</td><td>1000</td><td>13.80 ns</td><td>NA</td>
+</tr><tr><td>ListPrepend</td><td>10000</td><td>863.90 ns</td><td>NA</td>
+</tr><tr><td>LinkedListPrepend</td><td>10000</td><td>21.80 ns</td><td>NA</td>
+</tr><tr><td>ListInsert</td><td>10000</td><td>350.50 ns</td><td>NA</td>
+</tr><tr><td>LinkedListInsert</td><td>10000</td><td>22.90 ns</td><td>NA</td>
+</tr><tr><td>ListRemoveAt</td><td>10000</td><td>553.90 ns</td><td>NA</td>
+</tr><tr><td>LinkedListRemoveAt</td><td>10000</td><td>21.55 ns</td><td>NA</td>
+</tr><tr><td>ListPrepend</td><td>100000</td><td>11,614.30 ns</td><td>NA</td>
+</tr><tr><td>LinkedListPrepend</td><td>100000</td><td>69.90 ns</td><td>NA</td>
+</tr><tr><td>ListInsert</td><td>100000</td><td>5,777.20 ns</td><td>NA</td>
+</tr><tr><td>LinkedListInsert</td><td>100000</td><td>54.70 ns</td><td>NA</td>
+</tr><tr><td>ListRemoveAt</td><td>100000</td><td>8,653.00 ns</td><td>NA</td>
+</tr><tr><td>LinkedListRemoveAt</td><td>100000</td><td>56.20 ns</td><td>NA</td>
+</tr></tbody></table>
+</body>
+</html>
